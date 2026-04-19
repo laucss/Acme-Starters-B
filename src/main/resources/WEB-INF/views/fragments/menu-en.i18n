@@ -1,0 +1,101 @@
+# menu-en.i18n
+#
+# Copyright (C) 2012-2026 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+# master.menu.anonymous #######################################################
+
+master.menu.anonymous = Anonymous
+master.menu.anonymous.list-campaigns = List campaigns
+master.menu.anonymous.list-inventions = List inventions
+master.menu.anonymous.favourite-link = Favourite link
+master.menu.anonymous.list-strategies = List strategies
+master.menu.anonymous.list-sponsorships = List sponsorships
+master.menu.anonymous.list-reports = List reports
+
+# master.menu.authenticated #######################################################
+
+master.menu.authenticated = Authenticated
+master.menu.authenticated.list-inventions = List inventions
+master.menu.authenticated.list-reports = List reports
+master.menu.authenticated.list-strategies = List strategies
+master.menu.authenticated.list-sponsorships = List sponsorship
+master.menu.authenticated.list-campaigns = List campaigns
+
+# master.menu.administrator ###################################################
+
+master.menu.administrator = Administrator
+master.menu.administrator.list-user-accounts = List user accounts
+master.menu.administrator.populate-db-initial = Populate DB (initial)
+master.menu.administrator.populate-db-sample = Populate DB (samples)
+master.menu.administrator.shut-system-down = Shut system down
+
+# master.menu.provider ########################################################
+
+master.menu.provider = Provider
+master.menu.provider.favourite-link = Favourite link
+
+# master.menu.consumer ##########################################################
+
+master.menu.consumer = Consumer
+master.menu.consumer.favourite-link = Favourite link
+
+# master.menu.user-account ####################################################
+
+master.menu.user-account = Account
+master.menu.user-account.general-profile = General profile
+master.menu.user-account.become-provider = Become a provider
+master.menu.user-account.provider-profile = Provider profile
+master.menu.user-account.become-consumer = Become a consumer
+master.menu.user-account.consumer-profile = Consumer profile
+
+# inventor
+master.menu.user-account.become-inventor = Become an inventor
+master.menu.user-account.inventor-profile = Inventor profile
+
+# fundraiser
+master.menu.user-account.become-fundraiser = Become a fundraiser
+master.menu.user-account.fundraiser-profile = Fundraiser profile
+
+# sponsor
+master.menu.user-account.become-sponsor = Become a sponsor
+master.menu.user-account.sponsor-profile = Sponsor profile
+
+# spokesperson
+master.menu.user-account.become-spokesperson = Become a spokesperson
+master.menu.user-account.spokesperson-profile = Spokesperson profile
+
+# auditor
+master.menu.user-account.become-auditor= Become an auditor
+master.menu.user-account.auditor-profile = Auditor profile
+
+# master.menu.inventor ##########################################################
+
+master.menu.inventor = Inventor
+master.menu.inventor.list-my-inventions = List my inventions
+
+# master.menu.fundraiser ####################################################
+
+master.menu.fundraiser = Fundraiser
+master.menu.fundraiser.my-strategies = My strategies
+
+# master.menu.sponsor ####################################################
+
+master.menu.sponsor = Sponsor
+master.menu.sponsor.my-sponsorships = My sponsorships
+
+# master.menu.spokesperson ####################################################
+
+master.menu.spokesperson = Spokesperson
+master.menu.spokesperson.my-campaigns = My campaigns
+
+# master.menu.auditor ##########################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.list-my-reports = List my reports
+
