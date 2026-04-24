@@ -1,14 +1,12 @@
 
-package acme.entities.strategies;
+package acme.entities.projects;
 
-import java.time.temporal.ChronoUnit;
 import java.util.Date;
 import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
@@ -18,25 +16,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.validation.Mandatory;
-import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoment.Constraint;
-import acme.client.components.validation.ValidUrl;
-import acme.client.helpers.MomentHelper;
 import acme.constraints.ValidHeader;
-import acme.constraints.ValidStrategy;
 import acme.constraints.ValidText;
-import acme.constraints.ValidTicker;
-import acme.entities.projects.Project;
-import acme.realms.Fundraiser;
+import acme.entities.campaigns.Campaign;
+import acme.entities.inventions.Invention;
+import acme.entities.strategies.Strategy;
+import acme.realms.Member;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-@ValidStrategy
-public class Strategy extends AbstractEntity {
+public class Project extends AbstractEntity {
 
 	// Serialisation version --------------------------------------------------
 
@@ -45,14 +39,14 @@ public class Strategy extends AbstractEntity {
 	// Attributes -------------------------------------------------------------
 
 	@Mandatory
-	@ValidTicker
+	@ValidHeader
 	@Column(unique = true)
-	private String				ticker;
+	private String				title;
 
 	@Mandatory
 	@ValidHeader
 	@Column
-	private String				name;
+	private String				keyWords;
 
 	@Mandatory
 	@ValidText
@@ -62,17 +56,12 @@ public class Strategy extends AbstractEntity {
 	@Mandatory
 	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date				startMoment;
+	private Date				kickOff;
 
 	@Mandatory
 	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date				endMoment;
-
-	@Optional
-	@ValidUrl
-	@Column
-	private String				moreInfo;
+	private Date				closeOut;
 
 	@Mandatory
 	@Valid
@@ -85,27 +74,16 @@ public class Strategy extends AbstractEntity {
 	@Valid
 	@Transient
 	@Autowired
-	private StrategyRepository	repository;
+	private ProjectRepository	repository;
 
 
 	@Mandatory
 	@Valid
 	@Transient
-	public Double getMonthsActive() {
-		if (this.startMoment == null || this.endMoment == null)
-			return 0.;
-		Double months = MomentHelper.computeDifference(this.startMoment, this.endMoment, ChronoUnit.MONTHS);
-		return Math.round(months * 10) / 10.;
-	}
+	public Double personMonths() {
+		double totalMonths = this.repository.sumCampaigns(this.title) + this.repository.sumInventions(this.title) + this.repository.sumStrategies(this.title);
 
-	@Mandatory
-	@Valid
-	@Transient
-	public Double getExpectedPercentage() {
-		Double result;
-		Double total = this.repository.totalExpectedPercentagesTactics(this.getId());
-		result = total == null ? 0. : total;
-		return result;
+		return totalMonths / this.members.size();
 	}
 
 	// Relationships ----------------------------------------------------------
@@ -113,12 +91,22 @@ public class Strategy extends AbstractEntity {
 
 	@Mandatory
 	@Valid
-	@ManyToOne(optional = false)
-	private Fundraiser		fundraiser;
+	@ManyToMany
+	private Set<Member>		members;
 
 	@Mandatory
 	@Valid
-	@ManyToMany(mappedBy = "strategies")
-	private Set<Project>	projects;
+	@ManyToMany
+	private Set<Strategy>	strategies;
+
+	@Mandatory
+	@Valid
+	@ManyToMany
+	private Set<Invention>	inventions;
+
+	@Mandatory
+	@Valid
+	@ManyToMany
+	private Set<Campaign>	campaigns;
 
 }
