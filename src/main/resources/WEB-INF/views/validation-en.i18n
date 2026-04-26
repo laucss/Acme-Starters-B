@@ -33,3 +33,9 @@ acme.validation.campaign.published-without-milestone.message = A campaign cannot
 acme.validation.sponsorship.published-without-donations.message = A sponsorship cannot be published unless it has at least one donation
  
 acme.validation.report.published-without-sections.message = A report cannot be published unless it has at least one section
+
+
+
+acme.validation.duplicated-title.message = The title is duplicated
+
+acme.validation.invalid-project-time-interval.message = Kick off moment must be before close out moment 

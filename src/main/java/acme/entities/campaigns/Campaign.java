@@ -3,9 +3,11 @@ package acme.entities.campaigns;
 
 import java.time.temporal.ChronoUnit;
 import java.util.Date;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -26,6 +28,7 @@ import acme.constraints.ValidCampaign;
 import acme.constraints.ValidHeader;
 import acme.constraints.ValidText;
 import acme.constraints.ValidTicker;
+import acme.entities.projects.Project;
 import acme.realms.Spokesperson;
 import lombok.Getter;
 import lombok.Setter;
@@ -115,6 +118,11 @@ public class Campaign extends AbstractEntity {
 	@Mandatory
 	@Valid
 	@ManyToOne(optional = false)
-	private Spokesperson spokesperson;
+	private Spokesperson	spokesperson;
+
+	@Mandatory
+	@Valid
+	@ManyToMany(mappedBy = "campaigns")
+	private Set<Project>	projects;
 
 }
