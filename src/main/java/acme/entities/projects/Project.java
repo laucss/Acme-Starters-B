@@ -2,11 +2,9 @@
 package acme.entities.projects;
 
 import java.util.Date;
-import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
@@ -23,7 +21,6 @@ import acme.constraints.ValidText;
 import acme.entities.campaigns.Campaign;
 import acme.entities.inventions.Invention;
 import acme.entities.strategies.Strategy;
-import acme.realms.Member;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -40,7 +37,7 @@ public class Project extends AbstractEntity {
 
 	@Mandatory
 	@ValidHeader
-	@Column(unique = true)
+	@Column
 	private String				title;
 
 	@Mandatory
@@ -81,32 +78,15 @@ public class Project extends AbstractEntity {
 	@Valid
 	@Transient
 	public Double personMonths() {
-		double totalMonths = this.repository.sumCampaigns(this.title) + this.repository.sumInventions(this.title) + this.repository.sumStrategies(this.title);
+		double campaignsMonths = this.repository.findCampaignsByProjectId(this.getId()).stream().mapToDouble(Campaign::getMonthsActive).sum();
+		double inventionsMonths = this.repository.findInventionsByProjectId(this.getId()).stream().mapToDouble(Invention::getMonthsActive).sum();
+		double strategiesMonths = this.repository.findStrategiesByProjectId(this.getId()).stream().mapToDouble(Strategy::getMonthsActive).sum();
+		double totalMonths = campaignsMonths + inventionsMonths + strategiesMonths;
+		Integer totalMembers = this.repository.countByProjectId(this.getId());
+		return totalMembers == 0 ? 0. : totalMonths / totalMembers;
 
-		return totalMonths / this.members.size();
 	}
 
 	// Relationships ----------------------------------------------------------
-
-
-	@Mandatory
-	@Valid
-	@ManyToMany
-	private Set<Member>		members;
-
-	@Mandatory
-	@Valid
-	@ManyToMany
-	private Set<Strategy>	strategies;
-
-	@Mandatory
-	@Valid
-	@ManyToMany
-	private Set<Invention>	inventions;
-
-	@Mandatory
-	@Valid
-	@ManyToMany
-	private Set<Campaign>	campaigns;
 
 }
