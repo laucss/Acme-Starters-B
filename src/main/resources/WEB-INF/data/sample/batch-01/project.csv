@@ -1,6 +1,6 @@
 key,title,key-words,description,kick-off,close-out,draft-mode,key:manager
 # base entity
-project-01,"Lorem ipsum dolor sit amet, consectetur","Lorem ipsum dolor sit amet, consectetur","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/01/01 00:01,2200/12/31 23:59,false,manager-01
+project-01,"Project one with members","Lorem ipsum dolor sit amet, consectetur","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/01/01 00:01,2200/12/31 23:59,false,manager-01
 # title - standard variations
 project-02,"L","Lorem ipsum dolor sit amet, consectetur","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/01/01 00:01,2200/12/31 23:59,false,manager-01
 project-03,"Lo","Lorem ipsum dolor sit amet, consectetur","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/01/01 00:01,2200/12/31 23:59,false,manager-01

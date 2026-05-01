@@ -99,3 +99,8 @@ master.menu.spokesperson.my-campaigns = My campaigns
 master.menu.auditor = Auditor
 master.menu.auditor.list-my-reports = List my reports
 
+# master.menu.manager ##########################################################
+
+master.menu.manager = Manager
+master.menu.manager.my-projects = My projects
+
