@@ -103,4 +103,4 @@ master.menu.auditor.list-my-reports = Mis informes
 # master.menu.manager ##########################################################
 
 master.menu.manager = Manager
-master.menu.manager.list-my-projects = Mis proyectos
+master.menu.manager.my-projects = Mis proyectos

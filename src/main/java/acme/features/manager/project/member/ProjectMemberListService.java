@@ -33,8 +33,6 @@ public class ProjectMemberListService extends AbstractService<Manager, ProjectMe
 		this.project = this.repository.findProjectById(projectId);
 		this.projectMembers = this.repository.findProjectMembersByProjectId(projectId);
 
-		System.out.println("projectId = " + projectId);
-		System.out.println("members = " + this.repository.findProjectMembersByProjectId(projectId));
 	}
 
 	@Override
@@ -51,8 +49,14 @@ public class ProjectMemberListService extends AbstractService<Manager, ProjectMe
 	@Override
 	public void unbind() {
 
+		boolean showAdd;
+
 		super.unbindObjects(this.projectMembers, //
 			"member", "member.username");
+
+		showAdd = this.project.getDraftMode() && this.project.getManager().isPrincipal();
+		super.unbindGlobal("showAdd", showAdd);
+		super.unbindGlobal("projectId", this.project.getId());
 
 	}
 

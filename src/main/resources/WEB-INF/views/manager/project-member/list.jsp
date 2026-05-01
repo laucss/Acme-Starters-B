@@ -20,3 +20,6 @@
 
 </acme:list>
 
+<jstl:if test="${showAdd}">
+	<acme:button code="manager.project-member.list.button.add" action="/manager/project-member/add?projectId=${projectId}"/>
+</jstl:if>

@@ -9,7 +9,9 @@
 # they accept manager liabilities with respect to them.
 
 
-manager.project-member.list.title = Listing of the members
+manager.project-member.list.title = List of the members
 
 
 manager.projectMember.list.label.member = Members
+
+manager.project-member.list.button.add = Add members
