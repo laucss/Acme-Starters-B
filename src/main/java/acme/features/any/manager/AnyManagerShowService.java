@@ -40,7 +40,7 @@ public class AnyManagerShowService extends AbstractService<Any, Manager> {
 
 	@Override
 	public void unbind() {
-		super.unbindObject(this.manager, "position", "skills", "flag");
+		super.unbindObject(this.manager, "position", "skills", "flag", "userAccount.identity.fullName", "userAccount.identity.email");
 	}
 
 }

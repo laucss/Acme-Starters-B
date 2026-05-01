@@ -26,7 +26,7 @@ public class AnyProjectShowService extends AbstractService<Any, Project> {
 	public void load() {
 		int id;
 
-		id = super.getRequest().getData("id", int.class);
+		id = super.getRequest().getData("id", Integer.class);
 		this.project = this.repository.findProjectById(id);
 	}
 
@@ -42,6 +42,7 @@ public class AnyProjectShowService extends AbstractService<Any, Project> {
 	@Override
 	public void unbind() {
 		Tuple tuple = super.unbindObject(this.project, "title", "keyWords", "description", "kickOff", "closeOut", "draftMode", "personMonths");
-		tuple.put("projectId", this.project.getManager().getId());
+		tuple.put("managerId", this.project.getManager().getId());
+		tuple.put("id", this.project.getId());
 	}
 }
