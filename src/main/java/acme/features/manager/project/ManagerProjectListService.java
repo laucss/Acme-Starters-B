@@ -39,7 +39,7 @@ public class ManagerProjectListService extends AbstractService<Manager, Project>
 	@Override
 	public void unbind() {
 		super.unbindObjects(this.projects, //
-			"title", "keywords", "draftMode");
+			"title", "keyWords", "draftMode");
 	}
 
 }

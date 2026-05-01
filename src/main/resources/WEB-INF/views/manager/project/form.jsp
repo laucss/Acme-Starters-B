@@ -16,12 +16,11 @@
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
 <acme:form>
-	<acme:form-textbox code="manager.project.form.label.ticker" path="ticker"/>
-	<acme:form-textbox code="manager.project.form.label.name" path="name"/>
+	<acme:form-textbox code="manager.project.form.label.title" path="title"/>
+	<acme:form-textbox code="manager.project.form.label.keyWords" path="keyWords"/>
 	<acme:form-textarea code="manager.project.form.label.description" path="description"/>
-	<acme:form-moment code="manager.project.form.label.startMoment" path="startMoment"/>
-	<acme:form-moment code="manager.project.form.label.endMoment" path="endMoment"/>
-	<acme:form-url code="manager.project.form.label.moreInfo" path="moreInfo"/>
+	<acme:form-moment code="manager.project.form.label.kickOff" path="kickOff"/>
+	<acme:form-moment code="manager.project.form.label.closeOut" path="closeOut"/>
 	
 	<jstl:choose>	 
 		<jstl:when test="${_command == 'show' && draftMode == false}">
@@ -30,6 +29,8 @@
 			<acme:button code="manager.project.form.button.tactic" action="/manager/tactic/list?projectId=${id}"/>
 			<acme:button code="manager.project.form.button.invention" action="/manager/invention/list?projectId=${id}"/>
 			<acme:button code="manager.project.form.button.campaign" action="/manager/campaign/list?projectId=${id}"/>
+			
+			<acme:button code="manager.project.form.button.member" action="/manager/project-member/list?projectId=${id}"/>
 			
 		</jstl:when>
 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}">
@@ -44,7 +45,7 @@
 			<acme:submit code="manager.project.form.button.delete" action="/manager/project/delete"/>
 			<acme:submit code="manager.project.form.button.publish" action="/manager/project/publish"/>
 			
-			<acme:submit code="manager.project.form.button.members" action="/manager/project/members"/>
+			<acme:button code="manager.project.form.button.member" action="/manager/project-member/list?projectId=${id}"/>
 						
 		</jstl:when>
 		<jstl:when test="${_command == 'create'}">

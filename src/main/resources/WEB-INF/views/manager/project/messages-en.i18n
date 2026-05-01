@@ -27,6 +27,8 @@ manager.project.form.button.delete = Delete
 manager.project.form.button.create = Create
 manager.project.form.button.publish = Publish
 
+manager.project.form.button.member= Members
+
 manager.project.list.label.keyWords = Key words:
 manager.project.list.label.title = Title:
 manager.project.list.label.draftMode = Is in draft mode: 

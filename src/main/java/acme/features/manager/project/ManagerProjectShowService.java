@@ -43,8 +43,8 @@ public class ManagerProjectShowService extends AbstractService<Manager, Project>
 
 	@Override
 	public void unbind() {
-		Tuple tuple = super.unbindObject(this.project, "title", "keyWords", "description", "kickOff", "closeOut", "draftMode", "personMonths");
-		tuple.put("fundraiserId", this.project.getManager().getId());
+		Tuple tuple = super.unbindObject(this.project, "title", "keyWords", "description", "kickOff", "closeOut", "personMonths", "draftMode");
+		tuple.put("managerId", this.project.getManager().getId());
 		tuple.put("id", this.project.getId());
 	}
 

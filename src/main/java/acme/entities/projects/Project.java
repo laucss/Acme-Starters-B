@@ -81,7 +81,7 @@ public class Project extends AbstractEntity {
 	@Mandatory
 	@Valid
 	@Transient
-	public Double personMonths() {
+	public Double getPersonMonths() {
 		double campaignsMonths = this.repository.findCampaignsByProjectId(this.getId()).stream().mapToDouble(Campaign::getMonthsActive).sum();
 		double inventionsMonths = this.repository.findInventionsByProjectId(this.getId()).stream().mapToDouble(Invention::getMonthsActive).sum();
 		double strategiesMonths = this.repository.findStrategiesByProjectId(this.getId()).stream().mapToDouble(Strategy::getMonthsActive).sum();
@@ -110,6 +110,5 @@ public class Project extends AbstractEntity {
 	@Valid
 	@OneToMany(mappedBy = "project")
 	private Set<Campaign>	campaigns;
-
 
 }
