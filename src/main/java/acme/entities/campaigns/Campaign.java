@@ -3,11 +3,9 @@ package acme.entities.campaigns;
 
 import java.time.temporal.ChronoUnit;
 import java.util.Date;
-import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -120,9 +118,8 @@ public class Campaign extends AbstractEntity {
 	@ManyToOne(optional = false)
 	private Spokesperson	spokesperson;
 
-	@Mandatory
 	@Valid
-	@ManyToMany(mappedBy = "campaigns")
-	private Set<Project>	projects;
+	@ManyToOne(optional = true)
+	private Project			project;
 
 }

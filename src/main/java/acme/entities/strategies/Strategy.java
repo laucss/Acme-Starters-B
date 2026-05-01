@@ -3,11 +3,9 @@ package acme.entities.strategies;
 
 import java.time.temporal.ChronoUnit;
 import java.util.Date;
-import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -114,11 +112,10 @@ public class Strategy extends AbstractEntity {
 	@Mandatory
 	@Valid
 	@ManyToOne(optional = false)
-	private Fundraiser		fundraiser;
+	private Fundraiser	fundraiser;
 
-	@Mandatory
 	@Valid
-	@ManyToMany(mappedBy = "strategies")
-	private Set<Project>	projects;
+	@ManyToOne
+	private Project		project;
 
 }

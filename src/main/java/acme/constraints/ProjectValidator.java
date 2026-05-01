@@ -37,15 +37,6 @@ public class ProjectValidator extends AbstractValidator<ValidProject, Project> {
 		if (project == null)
 			result = true;
 		else {
-			{
-				boolean uniqueProject;
-				Project existingProject;
-
-				existingProject = this.repository.findProjectByTitle(project.getTitle());
-				uniqueProject = existingProject == null || existingProject.equals(project);
-
-				super.state(context, uniqueProject, "title", "acme.validation.duplicated-title.message");
-			}
 
 			{
 				boolean kickOffIsBeforecloseOut;
