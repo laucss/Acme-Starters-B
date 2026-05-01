@@ -23,19 +23,19 @@ public class AnyManagerShowService extends AbstractService<Any, Manager> {
 
 	@Override
 	public void load() {
-		int id;
+		Integer id = super.getRequest().getData("id", Integer.class);
 
-		id = super.getRequest().getData("id", Integer.class);
+		if (id == null) {
+			this.manager = null;
+			return;
+		}
+
 		this.manager = this.repository.findManagerById(id);
 	}
 
 	@Override
 	public void authorise() {
-		boolean status;
-
-		status = this.manager != null;
-
-		super.setAuthorised(status);
+		super.setAuthorised(this.manager != null);
 	}
 
 	@Override
