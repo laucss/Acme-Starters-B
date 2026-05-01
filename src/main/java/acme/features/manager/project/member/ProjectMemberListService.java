@@ -52,7 +52,7 @@ public class ProjectMemberListService extends AbstractService<Manager, ProjectMe
 	public void unbind() {
 
 		super.unbindObjects(this.projectMembers, //
-			"member.username");
+			"member", "member.username");
 
 	}
 
