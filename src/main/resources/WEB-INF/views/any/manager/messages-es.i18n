@@ -1,0 +1,10 @@
+
+any.manager.form.title = Detalles del manager
+
+any.manager.form.label.fullName = Nombre:
+any.manager.form.label.email = E-mail:
+any.manager.form.label.position = Posición:
+any.manager.form.label.skills = Habilidades:
+any.manager.form.label.flag = Bandera:
+
+

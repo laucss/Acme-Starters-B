@@ -25,6 +25,7 @@
 			<acme:menu-suboption code="master.menu.anonymous.list-sponsorships" action="/any/sponsorship/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.list-campaigns" action="/any/campaign/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.list-reports" action="/any/report/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.list-projects" action="/any/project/list"/>
 			
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
@@ -59,6 +60,7 @@
 		<acme:menu-option code="master.menu.inventor" access="hasRealm('Inventor')">
 			<acme:menu-suboption code="master.menu.inventor.list-my-inventions" action="/inventor/invention/list"/>
 		</acme:menu-option>
+		
 		
 		<%-- FUNDRAISER --%>
 		<acme:menu-option code="master.menu.fundraiser" access="hasRealm('Fundraiser')">
