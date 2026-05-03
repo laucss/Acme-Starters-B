@@ -4,7 +4,6 @@ package acme.features.manager.project;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
 import acme.entities.projects.Project;
 import acme.realms.Manager;
@@ -48,12 +47,6 @@ public class ManagerProjectUpdateService extends AbstractService<Manager, Projec
 
 	@Override
 	public void validate() {
-		boolean kickOffIsBeforecloseOut;
-		if (this.project.getKickOff() != null && this.project.getCloseOut() != null) {
-			kickOffIsBeforecloseOut = MomentHelper.isBefore(this.project.getKickOff(), this.project.getCloseOut());
-
-			super.state(kickOffIsBeforecloseOut, "*", "acme.validation.invalid-project-time-interval.message");
-		}
 		super.validateObject(this.project);
 	}
 
