@@ -60,27 +60,33 @@
 		<%-- INVENTOR --%>
 		<acme:menu-option code="master.menu.inventor" access="hasRealm('Inventor')">
 			<acme:menu-suboption code="master.menu.inventor.list-my-inventions" action="/inventor/invention/list"/>
+			<acme:menu-suboption code="master.menu.inventor.my-projects" action="/inventor/project/list"/>
 		</acme:menu-option>
+
 		
 		
 		<%-- FUNDRAISER --%>
 		<acme:menu-option code="master.menu.fundraiser" access="hasRealm('Fundraiser')">
 			<acme:menu-suboption code="master.menu.fundraiser.my-strategies" action="/fundraiser/strategy/list"/>
+			<acme:menu-suboption code="master.menu.fundraiser.my-projects" action="/fundraiser/project/list"/>
 		</acme:menu-option>
 		
 		<%-- AUDITOR --%>
 		<acme:menu-option code="master.menu.auditor" access="hasRealm('Auditor')">
 			<acme:menu-suboption code="master.menu.auditor.list-my-reports" action="/auditor/report/list"/>
+			<acme:menu-suboption code="master.menu.auditor.my-projects" action="/auditor/project/list"/>
 		</acme:menu-option>
 	 
 	 	<%-- SPOKESPERSON --%>
 		<acme:menu-option code="master.menu.spokesperson" access="hasRealm('Spokesperson')">
 			<acme:menu-suboption code="master.menu.spokesperson.my-campaigns" action="/spokesperson/campaign/list"/>
+			<acme:menu-suboption code="master.menu.spokesperson.my-projects" action="/spokesperson/project/list"/>
 		</acme:menu-option>
 	  
 	    <%-- SPONSOR --%>
 	      <acme:menu-option code="master.menu.sponsor" access="hasRealm('Sponsor')">
 	        <acme:menu-suboption code="master.menu.sponsor.my-sponsorships" action="/sponsor/sponsorship/list"/>
+	        <acme:menu-suboption code="master.menu.sponsor.my-projects" action="/sponsor/project/list"/>
 	    </acme:menu-option>
 	    
     	<%-- MANAGER --%>
