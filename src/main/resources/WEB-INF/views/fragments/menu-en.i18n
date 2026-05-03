@@ -109,4 +109,5 @@ master.menu.auditor.list-my-reports = List my reports
 
 master.menu.manager = Manager
 master.menu.manager.my-projects = My projects
+master.menu.manager.show-dashboard = Show dahsboard
 
