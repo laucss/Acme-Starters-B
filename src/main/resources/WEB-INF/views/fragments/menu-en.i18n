@@ -27,6 +27,7 @@ master.menu.authenticated.list-reports = List reports
 master.menu.authenticated.list-strategies = List strategies
 master.menu.authenticated.list-sponsorships = List sponsorship
 master.menu.authenticated.list-campaigns = List campaigns
+master.menu.authenticated.list-projects = List projects
 
 # master.menu.administrator ###################################################
 
@@ -66,6 +67,10 @@ master.menu.user-account.fundraiser-profile = Fundraiser profile
 # sponsor
 master.menu.user-account.become-sponsor = Become a sponsor
 master.menu.user-account.sponsor-profile = Sponsor profile
+
+# manager
+master.menu.user-account.become-manager = Become a manager
+master.menu.user-account.manager-profile = Manager profile
 
 # spokesperson
 master.menu.user-account.become-spokesperson = Become a spokesperson

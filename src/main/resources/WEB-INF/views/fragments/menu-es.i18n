@@ -27,6 +27,8 @@ master.menu.authenticated.list-reports = Ver informes
 master.menu.authenticated.list-strategies = Ver estrategias
 master.menu.authenticated.list-sponsorships = Ver patrocinios
 master.menu.authenticated.list-campaigns = Ver campañas
+master.menu.authenticated.list-projects = Ver proyectos
+
 
 # master.menu.administrator ###################################################
 
@@ -71,6 +73,10 @@ master.menu.user-account.fundraiser-profile = Perfil de recaudador de fondos
 # sponsor
 master.menu.user-account.become-sponsor = Hazte patrocinador
 master.menu.user-account.sponsor-profile = Perfil de patrocinador
+
+# manager
+master.menu.user-account.become-manager = Hazte manager
+master.menu.user-account.manager-profile = Perfil de manager
 
 # spokesperson
 master.menu.user-account.become-spokesperson = Hazte portavoz
