@@ -37,6 +37,7 @@
 			<acme:menu-suboption code="master.menu.authenticated.list-campaigns" action="/any/campaign/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.list-sponsorships" action="/any/sponsorship/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.list-reports" action="/any/report/list"/>
+			<acme:menu-suboption code="master.menu.authenticated.list-projects" action="/any/project/list"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRealm('Administrator')">
@@ -111,6 +112,9 @@
 			<%-- auditor --%>
 			<acme:menu-suboption code="master.menu.user-account.become-auditor" action="/authenticated/auditor/create" access="!hasRealm('Auditor')"/>
 			<acme:menu-suboption code="master.menu.user-account.auditor-profile" action="/authenticated/auditor/update" access="hasRealm('Auditor')"/>
+			<%-- manager --%>
+			<acme:menu-suboption code="master.menu.user-account.become-manager" action="/authenticated/manager/create" access="!hasRealm('Manager')"/>
+			<acme:menu-suboption code="master.menu.user-account.manager-profile" action="/authenticated/manager/update" access="hasRealm('Manager')"/>
 		</acme:menu-option>
 	</acme:menu-right>
 </acme:menu-bar>
