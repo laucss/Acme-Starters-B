@@ -16,10 +16,11 @@
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
 <acme:list>
-	<acme:list-column code="manager.project-member.list.label.member" path="member.username" width="100%"/>
+	<acme:list-column code="manager.user.list.label.username" path="username" width="25%"/>
+	<acme:list-column code="manager.user.list.label.name" path="identity.name" width="20%"/>	
+	<acme:list-column code="manager.user.list.label.surname" path="identity.surname" width="20%"/>
+	<acme:list-column code="manager.user.list.label.email" path="identity.email" width="35%"/>
+
 
 </acme:list>
 
-<jstl:if test="${showAdd}">
-	<acme:button code="manager.user.list.button.add" action="/manager/user/list"/>
-</jstl:if>

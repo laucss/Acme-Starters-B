@@ -9,9 +9,13 @@
 # they accept manager liabilities with respect to them.
 
 
-manager.project-member.list.title = List of the members
+manager.user.list.title = List of the available members
 
 
-manager.project-member.list.label.member = Members
+manager.user.list.label.username = Nombre de usuario:
 
-manager.user.list.button.add = Add members
+manager.user.list.label.fullName = Nombre completo:
+manager.user.list.label.email = Correo:
+
+manager.user.list.button.add = Añadir
+
