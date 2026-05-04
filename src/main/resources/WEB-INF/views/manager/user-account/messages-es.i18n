@@ -9,13 +9,14 @@
 # they accept manager liabilities with respect to them.
 
 
-manager.user.list.title = List of the available members
+manager.user-account.list.title = List of the available members
 
 
-manager.user.list.label.username = Username:
+manager.user-account.list.label.username = Nombre de usuario:
 
-manager.user.list.label.fullName = Full name:
-manager.user.list.label.email = Email:
+manager.user-account.list.label.name = Nombre:
+manager.user-account.list.label.surname = Apellido:
+manager.user-account.list.label.email = Correo:
 
-manager.user.list.button.add = Add
+manager.user-account.list.button.add = Añadir
 

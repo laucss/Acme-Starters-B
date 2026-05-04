@@ -16,10 +16,10 @@
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
 <acme:list>
-	<acme:list-column code="manager.user.list.label.username" path="username" width="25%"/>
-	<acme:list-column code="manager.user.list.label.name" path="identity.name" width="20%"/>	
-	<acme:list-column code="manager.user.list.label.surname" path="identity.surname" width="20%"/>
-	<acme:list-column code="manager.user.list.label.email" path="identity.email" width="35%"/>
+	<acme:list-column code="manager.user-account.list.label.username" path="username" width="25%"/>
+	<acme:list-column code="manager.user-account.list.label.name" path="identity.name" width="20%"/>	
+	<acme:list-column code="manager.user-account.list.label.surname" path="identity.surname" width="20%"/>
+	<acme:list-column code="manager.user-account.list.label.email" path="identity.email" width="35%"/>
 
 
 </acme:list>

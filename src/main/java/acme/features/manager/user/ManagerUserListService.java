@@ -1,9 +1,9 @@
 
 package acme.features.manager.user;
 
-import java.util.ArrayList;
 import java.util.Collection;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.components.principals.UserAccount;
@@ -15,17 +15,17 @@ public class ManagerUserListService extends AbstractService<Manager, UserAccount
 
 	// Internal state ---------------------------------------------------------
 
-	// @Autowired
-	//private ManagerUserRepository	repository;
+	@Autowired
+	private ManagerUserRepository	repository;
 
-	private Collection<UserAccount> users;
+	private Collection<UserAccount>	users;
 
 	// AbstractService interface -------------------------------------------
 
 
 	@Override
 	public void load() {
-		this.users = new ArrayList<>();
+		this.users = this.repository.findUsersWithRoles();
 	}
 
 	@Override
