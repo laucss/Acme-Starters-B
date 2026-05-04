@@ -26,7 +26,7 @@
 		<jstl:when test="${_command == 'show'}">
 			<acme:form-double code="any.project.form.label.personMonths" path="personMonths" readonly="true"/>
 			
-			<acme:button code="any.project.form.button.tactic" action="/any/tactic/list?projectId=${id}"/>
+			<acme:button code="any.project.form.button.strategy" action="/any/strategy/list?projectId=${id}"/>
 			<acme:button code="any.project.form.button.invention" action="/any/invention/list?projectId=${id}"/>
 			<acme:button code="any.project.form.button.campaign" action="/any/campaign/list?projectId=${id}"/>
 			
