@@ -54,6 +54,13 @@ public class ManagerProjectPublishService extends AbstractService<Manager, Proje
 			super.state(kickOffIsBeforecloseOut, "*", "acme.validation.invalid-project-time-interval.message");
 		}
 		super.validateObject(this.project);
+		boolean hasAtLeastOnePart;
+
+		Long numberOfParts = this.repository.computeInventionParts(this.project.getId());
+
+		hasAtLeastOnePart = numberOfParts > 0;
+
+		super.state(hasAtLeastOnePart, "*", "acme.validation.invention.published-without-parts.message");
 	}
 
 	@Override

@@ -25,4 +25,7 @@ public interface ManagerProjectRepository extends AbstractRepository {
 	@Query("select count(t) from Tactic t where t.strategy.id = :strategyId")
 	Long computeTacticsByStrategy(int strategyId);
 
+	@Query("select count(p) from Part p where p.invention.id = :inventionId")
+	Long computeInventionParts(int inventionId);
+
 }
