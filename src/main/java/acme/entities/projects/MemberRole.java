@@ -1,7 +1,7 @@
 
 package acme.entities.projects;
 
-public enum MemberRol {
+public enum MemberRole {
 	SPOKESPERSON, INVENTOR, FUNDRAISER
 
 }

@@ -84,26 +84,32 @@ master.menu.user-account.auditor-profile = Auditor profile
 
 master.menu.inventor = Inventor
 master.menu.inventor.list-my-inventions = List my inventions
+master.menu.inventor.my-projects = My projects
 
 # master.menu.fundraiser ####################################################
 
 master.menu.fundraiser = Fundraiser
 master.menu.fundraiser.my-strategies = My strategies
+master.menu.fundraiser.my-projects = My projects
 
 # master.menu.sponsor ####################################################
 
 master.menu.sponsor = Sponsor
 master.menu.sponsor.my-sponsorships = My sponsorships
+master.menu.sponsor.my-projects = My projects
 
 # master.menu.spokesperson ####################################################
 
 master.menu.spokesperson = Spokesperson
 master.menu.spokesperson.my-campaigns = My campaigns
+master.menu.spokesperson.my-projects = My projects
 
 # master.menu.auditor ##########################################################
 
 master.menu.auditor = Auditor
 master.menu.auditor.list-my-reports = List my reports
+master.menu.auditor.my-projects = My projects
+
 
 # master.menu.manager ##########################################################
 
