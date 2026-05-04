@@ -27,6 +27,8 @@ master.menu.authenticated.list-reports = Ver informes
 master.menu.authenticated.list-strategies = Ver estrategias
 master.menu.authenticated.list-sponsorships = Ver patrocinios
 master.menu.authenticated.list-campaigns = Ver campañas
+master.menu.authenticated.list-projects = Ver proyectos
+
 
 # master.menu.administrator ###################################################
 
@@ -50,6 +52,7 @@ master.menu.consumer.favourite-link = Enlace favorito
 
 master.menu.inventor = Inventor
 master.menu.inventor.list-my-inventions = Ver mis invenciones
+master.menu.inventor.my-projects = Mis proyectos
 
 # master.menu.user-account ####################################################
 
@@ -72,6 +75,10 @@ master.menu.user-account.fundraiser-profile = Perfil de recaudador de fondos
 master.menu.user-account.become-sponsor = Hazte patrocinador
 master.menu.user-account.sponsor-profile = Perfil de patrocinador
 
+# manager
+master.menu.user-account.become-manager = Hazte manager
+master.menu.user-account.manager-profile = Perfil de manager
+
 # spokesperson
 master.menu.user-account.become-spokesperson = Hazte portavoz
 master.menu.user-account.spokesperson-profile = Perfil de portavoz
@@ -84,21 +91,25 @@ master.menu.user-account.auditor-profile = Perfil de auditor
 
 master.menu.fundraiser = Recaudador de fondos
 master.menu.fundraiser.my-strategies = Mis estrategias
+master.menu.fundraiser.my-projects = Mis proyectos
 
 # master.menu.sponsor ####################################################
 
 master.menu.sponsor = Patrocinador
 master.menu.sponsor.my-sponsorships = Mis patrocinios
+master.menu.sponsor.my-projects = Mis proyectos
 
 # master.menu.spokesperson ####################################################
 
 master.menu.spokesperson = Portavoz
 master.menu.spokesperson.my-campaigns = Mis campañas
+master.menu.spokesperson.my-projects = Mis proyectos
 
 # master.menu.auditor ##########################################################
 
 master.menu.auditor = Auditor
 master.menu.auditor.list-my-reports = Mis informes
+master.menu.auditor.my-projects = Mis proyectos
 
 
 # master.menu.manager ##########################################################
