@@ -25,3 +25,9 @@
 	<acme:list-hidden path="endMoment"/>
 	<acme:list-hidden path="moreInfo"/>
 </acme:list>
+
+<jstl:if test="${isAuditor && projectId != null}">
+    <acme:button
+        code="any.report.list.button.add"
+        action="/auditor/report/assign?projectId=${projectId}" />
+</jstl:if>
