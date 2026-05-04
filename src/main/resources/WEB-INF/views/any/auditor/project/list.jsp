@@ -12,7 +12,5 @@
 	<acme:form-moment code="any.project.form.label.closeOut" path="closeOut"/>
 	<acme:form-double code="any.project.form.label.personMonths" path="personMonths"/>
 	
-	<acme:button code="any.project.form.button.manager" action="/any/manager/show?id=${managerId}"/>
-	<acme:button code="any.project.form.button.reports" action="/any/report/list?projectId=${id}"/>
-	<acme:button code="any.project.form.button.sponsorships" action="/any/sponsorship/list?projectId=${id}"/>
+
 </acme:form>

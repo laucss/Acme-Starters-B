@@ -11,6 +11,8 @@ any.project.form.label. = Cierre de proyecto:
 any.project.form.label.personMonths = Meses de la persona:
 
 any.project.form.button.manager = Manager
+any.project.form.button.reports = Reportes
+any.project.form.button.sponsorships = Patrocinios
 
 any.project.list.label.title = Title
 any.project.list.label.keyWords = KeyWords
