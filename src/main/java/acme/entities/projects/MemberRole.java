@@ -2,6 +2,6 @@
 package acme.entities.projects;
 
 public enum MemberRole {
-	SPOKESPERSON, INVENTOR, FUNDRAISER
+	SPOKESPERSON, INVENTOR, FUNDRAISER, MANAGER
 
 }

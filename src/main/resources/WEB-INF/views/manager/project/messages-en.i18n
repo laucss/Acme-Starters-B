@@ -18,7 +18,7 @@ manager.project.form.label.kickOff = Kick off moment:
 manager.project.form.label.closeOut = Close out moment:
 manager.project.form.label.personMonths = Person months:
 
-manager.project.form.button.tactic = Tactics
+manager.project.form.button.strategy = Strategies
 manager.project.form.button.invention = Inventions
 manager.project.form.button.campaign = Campaigns
 
