@@ -13,12 +13,11 @@ import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 import javax.validation.Valid;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoment.Constraint;
+import acme.client.helpers.SpringHelper;
 import acme.constraints.ValidHeader;
 import acme.constraints.ValidText;
 import acme.entities.campaigns.Campaign;
@@ -71,22 +70,19 @@ public class Project extends AbstractEntity {
 
 	// Derived attributes -----------------------------------------------------
 
-	@Mandatory
-	@Valid
-	@Transient
-	@Autowired
-	private ProjectRepository	repository;
-
 
 	@Mandatory
 	@Valid
 	@Transient
 	public Double getPersonMonths() {
-		double campaignsMonths = this.repository.findCampaignsByProjectId(this.getId()).stream().mapToDouble(Campaign::getMonthsActive).sum();
-		double inventionsMonths = this.repository.findInventionsByProjectId(this.getId()).stream().mapToDouble(Invention::getMonthsActive).sum();
-		double strategiesMonths = this.repository.findStrategiesByProjectId(this.getId()).stream().mapToDouble(Strategy::getMonthsActive).sum();
+
+		ProjectRepository repository = SpringHelper.getBean(ProjectRepository.class);
+
+		double campaignsMonths = repository.findCampaignsByProjectId(this.getId()).stream().mapToDouble(Campaign::getMonthsActive).sum();
+		double inventionsMonths = repository.findInventionsByProjectId(this.getId()).stream().mapToDouble(Invention::getMonthsActive).sum();
+		double strategiesMonths = repository.findStrategiesByProjectId(this.getId()).stream().mapToDouble(Strategy::getMonthsActive).sum();
 		double totalMonths = campaignsMonths + inventionsMonths + strategiesMonths;
-		Integer totalMembers = this.repository.countByProjectId(this.getId());
+		Integer totalMembers = repository.countByProjectId(this.getId());
 		return totalMembers == 0 ? 0. : totalMonths / totalMembers;
 
 	}
