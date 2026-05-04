@@ -17,6 +17,7 @@ master.menu.anonymous.favourite-link = Favourite link
 master.menu.anonymous.list-strategies = List strategies
 master.menu.anonymous.list-sponsorships = List sponsorships
 master.menu.anonymous.list-reports = List reports
+master.menu.anonymous.list-projects = List projects
 
 # master.menu.authenticated #######################################################
 
@@ -26,6 +27,7 @@ master.menu.authenticated.list-reports = List reports
 master.menu.authenticated.list-strategies = List strategies
 master.menu.authenticated.list-sponsorships = List sponsorship
 master.menu.authenticated.list-campaigns = List campaigns
+master.menu.authenticated.list-projects = List projects
 
 # master.menu.administrator ###################################################
 
@@ -66,6 +68,10 @@ master.menu.user-account.fundraiser-profile = Fundraiser profile
 master.menu.user-account.become-sponsor = Become a sponsor
 master.menu.user-account.sponsor-profile = Sponsor profile
 
+# manager
+master.menu.user-account.become-manager = Become a manager
+master.menu.user-account.manager-profile = Manager profile
+
 # spokesperson
 master.menu.user-account.become-spokesperson = Become a spokesperson
 master.menu.user-account.spokesperson-profile = Spokesperson profile
@@ -78,26 +84,32 @@ master.menu.user-account.auditor-profile = Auditor profile
 
 master.menu.inventor = Inventor
 master.menu.inventor.list-my-inventions = List my inventions
+master.menu.inventor.my-projects = My projects
 
 # master.menu.fundraiser ####################################################
 
 master.menu.fundraiser = Fundraiser
 master.menu.fundraiser.my-strategies = My strategies
+master.menu.fundraiser.my-projects = My projects
 
 # master.menu.sponsor ####################################################
 
 master.menu.sponsor = Sponsor
 master.menu.sponsor.my-sponsorships = My sponsorships
+master.menu.sponsor.my-projects = My projects
 
 # master.menu.spokesperson ####################################################
 
 master.menu.spokesperson = Spokesperson
 master.menu.spokesperson.my-campaigns = My campaigns
+master.menu.spokesperson.my-projects = My projects
 
 # master.menu.auditor ##########################################################
 
 master.menu.auditor = Auditor
 master.menu.auditor.list-my-reports = List my reports
+master.menu.auditor.my-projects = My projects
+
 
 # master.menu.manager ##########################################################
 

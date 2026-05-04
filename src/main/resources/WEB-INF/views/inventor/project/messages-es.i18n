@@ -1,0 +1,36 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2026 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for manager particular
+# purposes.  The copyright owner does not offer manager warranties or representations, nor do
+# they accept manager liabilities with respect to them.
+
+inventor.project.form.title = Detalles del proyecto 
+inventor.project.list.title = Lista de mis proyectos 
+
+
+inventor.project.list.label.keyWords = Palabras claves:
+inventor.project.list.label.title = Título:
+inventor.project.list.label.draftMode = Está en borrador: 
+
+
+inventor.project.form.label.title = Título:
+inventor.project.form.label.keyWords = Palabras claves:
+inventor.project.form.label.description = Descripción:
+inventor.project.form.label.kickOff = Momento de inicio:
+inventor.project.form.label.closeOut = Momento de cierre:
+inventor.project.form.label.personMonths = Meses por persona: 
+
+inventor.project.form.button.tactic = Tácticas
+inventor.project.form.button.invention = Invenciones
+inventor.project.form.button.campaign = Campañas
+
+
+inventor.project.form.button.member= Miembros
+
+
+
+

@@ -30,7 +30,7 @@ public class Member extends AbstractSquad {
 	public Set<Class<? extends AbstractRole>> getMembers() {
 		Set<Class<? extends AbstractRole>> result;
 
-		result = Set.of(Fundraiser.class, Inventor.class, Spokesperson.class);
+		result = Set.of(Fundraiser.class, Inventor.class, Spokesperson.class, Manager.class);
 
 		return result;
 	}

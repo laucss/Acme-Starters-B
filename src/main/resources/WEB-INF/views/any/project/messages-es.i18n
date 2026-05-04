@@ -1,0 +1,19 @@
+
+any.project.form.title = Detalles del Proyecto
+any.project.list.title = Listado de projectos
+
+any.project.form.label.title = Título:
+any.project.form.label.keyWords = Palabras clave:
+any.project.form.label.description = Descripción:
+any.project.form.label.kickOff = Inicio de proyecto:
+any.project.form.label.closeOut = Cierre de proyecto:
+any.project.form.label. = Cierre de proyecto:
+any.project.form.label.personMonths = Meses de la persona:
+
+any.project.form.button.manager = Manager
+
+any.project.list.label.title = Title
+any.project.list.label.keyWords = KeyWords
+any.project.list.label.personMonths = Personas por mes: 
+
+

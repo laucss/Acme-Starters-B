@@ -1,0 +1,36 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2026 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for member particular
+# purposes.  The copyright owner does not offer member warranties or representations, nor do
+# they accept member liabilities with respect to them.
+
+member.strategy.form.title = Strategy form
+member.strategy.list.title = Listing of my strategies
+
+member.strategy.form.label.name = Name:
+member.strategy.form.label.ticker = Ticker:
+member.strategy.form.label.monthsActive = Months active:
+member.strategy.form.label.expectedPercentage = Expected percentage:
+member.strategy.form.label.description = Description:
+member.strategy.form.label.startMoment = Start moment:
+member.strategy.form.label.endMoment = End moment:
+member.strategy.form.label.moreInfo = More info (optional):
+
+member.strategy.form.button.tactic = Tactics
+member.strategy.form.button.update = Update
+member.strategy.form.button.delete = Delete
+member.strategy.form.button.create = Create
+member.strategy.form.button.publish = Publish
+
+member.strategy.list.label.name = Name:
+member.strategy.list.label.ticker = Ticker:
+member.strategy.list.label.expectedPercentage = Expected percentage:
+member.strategy.list.label.draftMode = Is in draft mode: 
+
+member.strategy.list.button.create = Create
+
+
