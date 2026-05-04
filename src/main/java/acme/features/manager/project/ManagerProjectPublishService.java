@@ -60,7 +60,7 @@ public class ManagerProjectPublishService extends AbstractService<Manager, Proje
 
 		hasAtLeastOnePart = numberOfParts > 0;
 
-		super.state(hasAtLeastOnePart, "*", "acme.validation.invention.published-without-parts.message");
+		super.state(hasAtLeastOnePart, "*", "acme.validation.project.published-without-inventions.message");
 	}
 
 	@Override
