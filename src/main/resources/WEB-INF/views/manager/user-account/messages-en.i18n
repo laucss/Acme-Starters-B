@@ -13,10 +13,8 @@ manager.user-account.list.title = List of the available members
 
 
 manager.user-account.list.label.username = username:
-
-manager.user-account.list.label.name = Name:
-manager.user-account.list.label.surname = Surname:
 manager.user-account.list.label.email = Email:
+manager.user-account.list.label.role = Role: 
 
 manager.user-account.list.button.add = Add
 

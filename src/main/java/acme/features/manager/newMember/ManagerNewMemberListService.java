@@ -1,5 +1,5 @@
 
-package acme.features.manager.user;
+package acme.features.manager.newMember;
 
 import java.util.Collection;
 
@@ -11,14 +11,14 @@ import acme.client.services.AbstractService;
 import acme.realms.Manager;
 
 @Service
-public class ManagerUserListService extends AbstractService<Manager, UserAccount> {
+public class ManagerNewMemberListService extends AbstractService<Manager, UserAccount> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private ManagerUserRepository	repository;
+	private ManagerNewMemberRepository	repository;
 
-	private Collection<UserAccount>	users;
+	private Collection<UserAccount>		users;
 
 	// AbstractService interface -------------------------------------------
 
@@ -35,8 +35,10 @@ public class ManagerUserListService extends AbstractService<Manager, UserAccount
 
 	@Override
 	public void unbind() {
+
 		super.unbindObjects(this.users, //
-			"username", "identity.name", "identity.surname", "identity.email");
+			"username", "identity.email");
+
 	}
 
 }
