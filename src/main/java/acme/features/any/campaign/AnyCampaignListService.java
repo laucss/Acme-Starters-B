@@ -21,12 +21,30 @@ public class AnyCampaignListService extends AbstractService<Any, Campaign> {
 
 	@Override
 	public void load() {
-		this.campaigns = this.repository.findPublishedCampaigns();
+		Integer projectId = null;
+
+		if (super.getRequest().hasData("projectId"))
+			projectId = super.getRequest().getData("projectId", Integer.class);
+
+		if (projectId != null)
+			this.campaigns = this.repository.findCampaignsByProjectId(projectId);
+		else
+			this.campaigns = this.repository.findPublishedCampaigns();
 	}
 
 	@Override
 	public void authorise() {
-		super.setAuthorised(true);
+		boolean status = true;
+
+		if (super.getRequest().hasData("projectId")) {
+			int projectId = super.getRequest().getData("projectId", int.class);
+
+			var project = this.repository.findProjectById(projectId);
+
+			status = project != null && !project.getDraftMode();
+		}
+
+		super.setAuthorised(status);
 	}
 
 	@Override
