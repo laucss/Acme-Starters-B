@@ -23,6 +23,7 @@ any.report.form.label.hours = Horas:
 
 any.report.form.button.sections = Secciones
 any.report.form.button.auditor = Auditor
+any.project.button.auditor.create = Añadir reporte
 
 any.report.list.label.ticker = Referencia
 any.report.list.label.name = Nombre

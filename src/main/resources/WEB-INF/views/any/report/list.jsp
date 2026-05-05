@@ -27,7 +27,5 @@
 </acme:list>
 
 <jstl:if test="${isAuditor && projectId != null}">
-    <acme:button
-        code="any.report.list.button.add"
-        action="/auditor/report/assign?projectId=${projectId}" />
+    <acme:button code="any.project.button.auditor.create" action="/auditor/report-assignment/create?projectId=${projectId}"/>
 </jstl:if>
