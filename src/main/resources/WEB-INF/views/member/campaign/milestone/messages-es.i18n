@@ -1,0 +1,23 @@
+# messages-es.i18n
+#
+# Copyright (C) 2012-2026 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for member particular
+# purposes.  The copyright owner does not offer member warranties or representations, nor do
+# they accept member liabilities with respect to them.
+
+member.milestone.form.title = Detalles del hito
+member.milestone.list.title = Listado de hitos
+
+member.milestone.form.label.title = Título:
+member.milestone.form.label.achievements = Logros:
+member.milestone.form.label.effort = Esfuerzo:
+member.milestone.form.label.kind = Tipo:
+
+member.milestone.list.label.title = Título
+member.milestone.form.label.achievements = Logros
+member.milestone.list.label.effort = Esfuerzo
+member.milestone.list.label.kind = Tipo
+

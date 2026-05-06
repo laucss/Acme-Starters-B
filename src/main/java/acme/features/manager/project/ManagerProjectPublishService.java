@@ -1,12 +1,17 @@
 
 package acme.features.manager.project;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
+import acme.entities.campaigns.Campaign;
+import acme.entities.inventions.Invention;
 import acme.entities.projects.Project;
+import acme.entities.strategies.Strategy;
 import acme.realms.Manager;
 
 @Service
@@ -68,6 +73,22 @@ public class ManagerProjectPublishService extends AbstractService<Manager, Proje
 	public void execute() {
 		this.project.setDraftMode(false);
 		this.repository.save(this.project);
+
+		Collection<Invention> inventions = this.repository.findInventionsByProjectId(this.project.getId());
+		for (Invention i : inventions) {
+			i.setDraftMode(false);
+			this.repository.save(i);
+		}
+		Collection<Strategy> strategies = this.repository.findStrategiesByProjectId(this.project.getId());
+		for (Strategy s : strategies) {
+			s.setDraftMode(false);
+			this.repository.save(s);
+		}
+		Collection<Campaign> campaigns = this.repository.findCampaignsByProjectId(this.project.getId());
+		for (Campaign c : campaigns) {
+			c.setDraftMode(false);
+			this.repository.save(c);
+		}
 	}
 
 	@Override
