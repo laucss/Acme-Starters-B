@@ -16,15 +16,15 @@
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
 <acme:form>
-	<acme:form-select code="manager.project-member.form.label.choices" path="choices" choices="${choices}" />
+	<acme:form-select code="manager.project-member.form.label.choices" path="selected" choices="${choices}" />
 	
 	<jstl:choose>	 
 		<jstl:when test="${_command == 'create'}">
-			<acme:submit code="manager.project-member.form.button.addMember" action="/manager/project-member/create?projectId=${projectId}$role=${role}"/>
+			<acme:submit code="manager.project-member.form.button.addMember" action="/manager/project-member/create?projectId=${projectId}&role=${role}"/>
 		</jstl:when>	
 		
 		<jstl:when test="${_command == 'delete'}">
-			<acme:submit code="manager.project-member.form.button.deleteMember" action="/manager/project-member/delete?projectId=${projectId}$role=${role}"/>
+			<acme:submit code="manager.project-member.form.button.deleteMember" action="/manager/project-member/delete?projectId=${projectId}&role=${role}"/>
 		</jstl:when>	
 	</jstl:choose>
 

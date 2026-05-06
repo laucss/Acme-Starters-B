@@ -15,4 +15,4 @@ manager.project-member.form.title = Selection of a new member
 manager.project-member.form.button.addMember = Add member
 manager.project-member.form.button.deleteMember = Delete member
 
-manager.project-member.form.label.choices = Posibles new members
+manager.project-member.form.label.choices = Posible new members

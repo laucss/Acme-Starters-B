@@ -9,7 +9,7 @@
 # they accept member liabilities with respect to them.
 
 
-member.fundraiser.list.title = List of fundraisers members
+manager.fundraiser.list.title = List of fundraisers members
 
 
 manager.fundraiser.list.label.username = Username:

@@ -6,13 +6,16 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.client.components.principals.UserAccount;
 import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractService;
+import acme.entities.projects.MemberRole;
 import acme.entities.projects.Project;
 import acme.entities.projects.ProjectMember;
 import acme.realms.Fundraiser;
 import acme.realms.Inventor;
 import acme.realms.Manager;
+import acme.realms.Member;
 import acme.realms.Spokesperson;
 
 @Service
@@ -42,22 +45,65 @@ public class ManagerProjectMemberCreateService extends AbstractService<Manager, 
 
 	@Override
 	public void authorise() {
-		super.setAuthorised(true);
+		String roleUrl = super.getRequest().getData("role", String.class);
+
+		boolean validRole = "SPOKESPERSON".equals(roleUrl) || "FUNDRAISER".equals(roleUrl) || "INVENTOR".equals(roleUrl);
+		Boolean status = this.project != null && this.project.getManager().getId() == super.getRequest().getPrincipal().getActiveRealm().getId() && validRole;
+		super.setAuthorised(status);
 	}
 
 	@Override
 	public void bind() {
-		//super.bindObject(this.project, "title", "keyWords", "description", "kickOff", "closeOut");
+		super.bindObject(this.projectMember);
+
+		int selectedUserId = super.getRequest().getData("selected", int.class);
+
+		String roleUrl = super.getRequest().getData("role", String.class);
+
+		MemberRole role = null;
+
+		UserAccount cuenta = null;
+
+		if ("FUNDRAISER".equals(roleUrl)) {
+			Fundraiser fundraiser = this.repository.findFundraiserById(selectedUserId);
+			cuenta = fundraiser.getUserAccount();
+			role = MemberRole.FUNDRAISER;
+			//
+		} else if ("INVENTOR".equals(roleUrl)) {
+			Inventor inventor = this.repository.findInventorById(selectedUserId);
+			cuenta = inventor.getUserAccount();
+			role = MemberRole.INVENTOR;
+			//
+		} else if ("SPOKESPERSON".equals(roleUrl)) {
+			Spokesperson spokesperson = this.repository.findSpokespersonById(selectedUserId);
+			cuenta = spokesperson.getUserAccount();
+			role = MemberRole.SPOKESPERSON;
+		}
+
+		if (cuenta != null) {
+			this.projectMember.setRole(role);
+			Member member = this.repository.findMemberById(cuenta.getId());
+			if (member == null) {
+				member = super.newObject(Member.class);
+				member.setUserAccount(cuenta);
+				this.repository.save(member);
+			}
+			this.projectMember.setMember(member);
+		}
+
 	}
 
 	@Override
 	public void validate() {
-		//super.validateObject(this.project);
+		super.validateObject(this.projectMember);
+
+		if (this.projectMember.getMember() == null)
+			super.state(false, "selected", "projectMember.create.validation.NoUserSelected");
 	}
 
 	@Override
 	public void execute() {
-		//this.repository.save(this.project);
+		this.repository.save(this.projectMember);
 	}
 
 	@Override

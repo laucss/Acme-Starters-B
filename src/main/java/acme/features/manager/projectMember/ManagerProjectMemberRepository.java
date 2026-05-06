@@ -14,6 +14,7 @@ import acme.entities.projects.Project;
 import acme.entities.projects.ProjectMember;
 import acme.realms.Fundraiser;
 import acme.realms.Inventor;
+import acme.realms.Member;
 import acme.realms.Spokesperson;
 
 @Repository
@@ -36,5 +37,17 @@ public interface ManagerProjectMemberRepository extends AbstractRepository {
 
 	@Query("select s from Spokesperson s where not exists (select pm from ProjectMember pm where pm.project.id = :projectId and pm.role = acme.entities.projects.MemberRole.SPOKESPERSON and pm.member.userAccount = s.userAccount)")
 	List<Spokesperson> findSpokespersonsNotInProject(int projectId);
+
+	@Query("select f from Fundraiser f where f.id = :fundraiserId")
+	Fundraiser findFundraiserById(int fundraiserId);
+
+	@Query("select i from Inventor i where i.id = :inventorId")
+	Inventor findInventorById(int inventorId);
+
+	@Query("select s from Spokesperson s where s.id = :spokespersonId")
+	Spokesperson findSpokespersonById(int spokespersonId);
+
+	@Query("select m from Member m where m.userAccount.id = :userAccountId")
+	Member findMemberById(int userAccountId);
 
 }
