@@ -1,0 +1,28 @@
+<%--
+- list.jsp
+-
+- Copyright (C) 2012-2026 Rafael Corchuelo.
+-
+- In keeping with the traditional purpose of furthering education and research, it is
+- the policy of the copyright owner to permit non-commercial use and redistribution of
+- this software. It has been tested carefully, but it is not guaranteed for any particular
+- purposes.  The copyright owner does not offer any warranties or representations, nor do
+- they accept any liabilities with respect to them.
+--%>
+
+<%@page%>
+
+<%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="acme" uri="http://acme-framework.org/"%>
+
+<acme:list>
+	<acme:list-column code="member.project-member.list.label.username" path="member.userAccount.username" width="30%"/>
+	<acme:list-column code="member.project-member.list.label.email" path="member.userAccount.identity.email" width="40%"/>
+	<acme:list-column code="member.project-member.list.label.role" path="role" width="30%"/>
+</acme:list>
+
+<jstl:if test="${showAdd}">
+	<acme:button code="member.project-member.list.button.manageFundraisers" action="/manager/fundraiser/list?projectId=${projectId}"/>
+	<acme:button code="member.project-member.list.button.manageInventors" action="/manager/inventor/list?projectId=${projectId}"/>
+	<acme:button code="member.project-member.list.button.manageSpokespersons" action="/manager/spokesperson/list?projectId=${projectId}"/>
+</jstl:if>

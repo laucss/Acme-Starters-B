@@ -9,11 +9,12 @@
 # they accept manager liabilities with respect to them.
 
 
-manager.project-member.list.title = Lista de miembros disponibles
-manager.project-member.form.title = Selección de un nuevo miembro
+member.project-member.list.title = Lista de miembros
 
-manager.project-member.form.button.addMember = Añadir miembro
-manager.project-member.form.button.deleteMember = Eliminar miembro
+member.project-member.list.label.username = Nombre de usuario:
+member.project-member.list.label.email = Email:
+member.project-member.list.label.role = Rol:
 
-manager.project-member.form.label.choices = Posibles nuevos miembros:
-
+member.project-member.list.button.manageFundraisers = Gestionar recaudadores de fondos
+member.project-member.list.button.manageInventors = Gestionar inventores
+member.project-member.list.button.manageSpokespersons = Gestionar portavoces
