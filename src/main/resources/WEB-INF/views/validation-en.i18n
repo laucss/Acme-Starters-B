@@ -39,3 +39,5 @@ acme.validation.project.published-without-inventions.message = A project cannot 
 acme.validation.duplicated-title.message = The title is duplicated
 
 acme.validation.invalid-project-time-interval.message = Kick off moment must be before close out moment 
+
+projectMember.create.validation.NoUserSelected = There is no user selected

@@ -16,3 +16,6 @@ inventor-09,user-account-inventor-09,"Bio of inventor","key-word1_key-word2_key-
 # licensed - standard variations
 inventor-10,user-account-inventor-10,"Bio of inventor","key-word1_key-word2_key-word3",true
 # licensed - no singular values
+# mismo user - distinto rol
+inventor-11,user-account-fundraiser-10,"Bio of inventor","key-word1_key-word2_key-word3",true
+

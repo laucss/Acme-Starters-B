@@ -1,5 +1,5 @@
 
-package acme.features.manager.project.member;
+package acme.features.manager.inventor;
 
 import javax.annotation.PostConstruct;
 
@@ -7,18 +7,18 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 
 import acme.client.controllers.AbstractController;
-import acme.entities.projects.ProjectMember;
+import acme.realms.Inventor;
 import acme.realms.Manager;
 
 @Controller
-public class ProjectMemberController extends AbstractController<Manager, ProjectMember> {
+public class ManagerInventorController extends AbstractController<Manager, Inventor> {
 
 	@PostConstruct
 	protected void initialise() {
 		super.setMediaType(MediaType.TEXT_HTML);
 
-		super.addBasicCommand("list", ProjectMemberListService.class);
-		// super.addBasicCommand("show", ManagerProjectShowService.class);
+		super.addBasicCommand("list", ManagerInventorListService.class);
+		// super.addBasicCommand("show", ManagerNewMemberListService.class);
 		//super.addBasicCommand("create", ManagerProjectCreateService.class);
 		//super.addBasicCommand("update", ManagerProjectUpdateService.class);
 		//super.addBasicCommand("delete", ManagerProjectDeleteService.class);

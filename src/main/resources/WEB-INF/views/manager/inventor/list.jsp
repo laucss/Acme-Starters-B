@@ -16,10 +16,13 @@
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
 <acme:list>
-	<acme:list-column code="manager.projectMember.list.label.member" path="member.username" width="100%"/>
-
+	<acme:list-column code="manager.inventor.list.label.username" path="userAccount.username" width="20%"/>
+	<acme:list-column code="manager.inventor.list.label.bio" path="bio" width="60%"/>
+	<acme:list-column code="manager.inventor.list.label.licensed" path="licensed" width="20%"/>
 </acme:list>
 
-<jstl:if test="${showAdd}">
-	<acme:button code="manager.project-member.list.button.add" action="/manager/project-member/add?projectId=${projectId}"/>
+<jstl:if test="${draftMode}">
+	<acme:button code="member.project-member.list.button.addInventors" action="/manager/project-member/create?projectId=${projectId}&role=INVENTOR"/>
+	<acme:button code="member.project-member.list.button.deteleInventors" action="/manager/project-member/delete?projectId=${projectId}&role=INVENTOR"/>
 </jstl:if>
+

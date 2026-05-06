@@ -9,9 +9,10 @@
 # they accept manager liabilities with respect to them.
 
 
-manager.project-member.list.title = List of the members
+manager.project-member.list.title = List of the available members
+manager.project-member.form.title = Selection of a new member
 
+manager.project-member.form.button.addMember = Add member
+manager.project-member.form.button.deleteMember = Delete member
 
-manager.projectMember.list.label.member = Members
-
-manager.project-member.list.button.add = Add members
+manager.project-member.form.label.choices = Posible new members

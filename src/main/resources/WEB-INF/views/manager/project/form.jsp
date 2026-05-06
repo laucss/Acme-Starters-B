@@ -30,7 +30,7 @@
 			<acme:button code="manager.project.form.button.invention" action="/member/invention/list?projectId=${id}"/>
 			<acme:button code="manager.project.form.button.campaign" action="/member/campaign/list?projectId=${id}"/>
 			
-			<acme:button code="manager.project.form.button.member" action="/manager/project-member/list?projectId=${id}"/>
+			<acme:button code="manager.project.form.button.member" action="/member/project-member/list?projectId=${id}"/>
 			
 		</jstl:when>
 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}">
@@ -45,7 +45,7 @@
 			<acme:submit code="manager.project.form.button.delete" action="/manager/project/delete"/>
 			<acme:submit code="manager.project.form.button.publish" action="/manager/project/publish"/>
 			
-			<acme:button code="manager.project.form.button.member" action="/manager/project-member/list?projectId=${id}"/>
+			<acme:button code="manager.project.form.button.member" action="/member/project-member/list?projectId=${id}"/>
 						
 		</jstl:when>
 		<jstl:when test="${_command == 'create'}">
