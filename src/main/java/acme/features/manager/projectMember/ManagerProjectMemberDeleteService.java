@@ -49,11 +49,7 @@ public class ManagerProjectMemberDeleteService extends AbstractService<Manager, 
 
 	@Override
 	public void bind() {
-		super.bindObject(this.projectMember);
-
 		int selectedPMId = super.getRequest().getData("selected", int.class);
-
-		String roleUrl = super.getRequest().getData("role", String.class);
 
 		ProjectMember pmSelected = this.repository.findProjectMemberByIdAndProjectId(this.project.getId(), selectedPMId);
 
