@@ -17,6 +17,5 @@ manager.fundraiser.list.label.bank = Bank:
 manager.fundraiser.list.label.agent = Agent:
 
 
-member.project-member.list.button.manageFundraisers = Manage fundraisers
-member.project-member.list.button.manageInventors = Manage inventors
-member.project-member.list.button.manageSpokespersons = Manage spokespeople
+member.project-member.list.button.addFundraisers = Add fundraiser
+member.project-member.list.button.deteleFundraisers = Delete fundraiser

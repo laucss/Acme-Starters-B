@@ -9,14 +9,11 @@
 # they accept manager liabilities with respect to them.
 
 
-manager.user-account.list.title = List of the available members
+manager.project-member.list.title = Lista de miembros disponibles
+manager.project-member.form.title = Selección de un nuevo miembro
 
+manager.project-member.form.button.addMember = Añadir miembro
+manager.project-member.form.button.deleteMember = Eliminar miembro
 
-manager.user-account.list.label.username = Nombre de usuario:
-
-manager.user-account.list.label.name = Nombre:
-manager.user-account.list.label.surname = Apellido:
-manager.user-account.list.label.email = Correo:
-
-manager.user-account.list.button.add = Añadir
+manager.project-member.form.label.choices = Posibles nuevos miembros:
 
