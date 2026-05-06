@@ -1,5 +1,5 @@
 
-package acme.features.manager.project.member;
+package acme.features.member.projectMember;
 
 import javax.annotation.PostConstruct;
 
@@ -8,10 +8,10 @@ import org.springframework.stereotype.Controller;
 
 import acme.client.controllers.AbstractController;
 import acme.entities.projects.ProjectMember;
-import acme.realms.Manager;
+import acme.realms.Member;
 
 @Controller
-public class ProjectMemberController extends AbstractController<Manager, ProjectMember> {
+public class ProjectMemberController extends AbstractController<Member, ProjectMember> {
 
 	@PostConstruct
 	protected void initialise() {

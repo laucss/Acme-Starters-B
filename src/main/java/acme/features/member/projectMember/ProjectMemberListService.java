@@ -1,5 +1,5 @@
 
-package acme.features.manager.project.member;
+package acme.features.member.projectMember;
 
 import java.util.Collection;
 
@@ -9,10 +9,10 @@ import org.springframework.stereotype.Service;
 import acme.client.services.AbstractService;
 import acme.entities.projects.Project;
 import acme.entities.projects.ProjectMember;
-import acme.realms.Manager;
+import acme.realms.Member;
 
 @Service
-public class ProjectMemberListService extends AbstractService<Manager, ProjectMember> {
+public class ProjectMemberListService extends AbstractService<Member, ProjectMember> {
 
 	// Internal state ---------------------------------------------------------
 
@@ -52,7 +52,7 @@ public class ProjectMemberListService extends AbstractService<Manager, ProjectMe
 		boolean showAdd;
 
 		super.unbindObjects(this.projectMembers, //
-			"member", "member.username");
+			"member.userAccount.username", "member.userAccount.identity.email", "role");
 
 		showAdd = this.project.getDraftMode() && this.project.getManager().isPrincipal();
 		super.unbindGlobal("showAdd", showAdd);
