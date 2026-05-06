@@ -26,6 +26,7 @@ import acme.constraints.ValidHeader;
 import acme.constraints.ValidReport;
 import acme.constraints.ValidText;
 import acme.constraints.ValidTicker;
+import acme.entities.projects.Project;
 import acme.realms.Auditor;
 import lombok.Getter;
 import lombok.Setter;
@@ -107,5 +108,10 @@ public class Report extends AbstractEntity {
 	@Mandatory
 	@Valid
 	@ManyToOne
-	private Auditor auditor;
+	private Auditor	auditor;
+
+	@Valid
+	@ManyToOne(optional = true)
+	private Project	project;
+
 }

@@ -26,9 +26,9 @@
 		<jstl:when test="${_command == 'show' && draftMode == false}">
 			<acme:form-double code="manager.project.form.label.personMonths" path="personMonths" readonly="true"/>
 			
-			<acme:button code="manager.project.form.button.tactic" action="/manager/tactic/list?projectId=${id}"/>
-			<acme:button code="manager.project.form.button.invention" action="/manager/invention/list?projectId=${id}"/>
-			<acme:button code="manager.project.form.button.campaign" action="/manager/campaign/list?projectId=${id}"/>
+			<acme:button code="manager.project.form.button.strategy" action="/member/strategy/list?projectId=${id}"/>
+			<acme:button code="manager.project.form.button.invention" action="/member/invention/list?projectId=${id}"/>
+			<acme:button code="manager.project.form.button.campaign" action="/member/campaign/list?projectId=${id}"/>
 			
 			<acme:button code="manager.project.form.button.member" action="/manager/project-member/list?projectId=${id}"/>
 			
@@ -37,9 +37,9 @@
 			
 			<acme:form-double code="manager.project.form.label.personMonths" path="personMonths" readonly="true"/>
 			
-			<acme:button code="manager.project.form.button.tactic" action="/manager/tactic/list?projectId=${id}"/>
-			<acme:button code="manager.project.form.button.invention" action="/manager/invention/list?projectId=${id}"/>
-			<acme:button code="manager.project.form.button.campaign" action="/manager/campaign/list?projectId=${id}"/>
+			<acme:button code="manager.project.form.button.strategy" action="/member/strategy/list?projectId=${id}"/>
+			<acme:button code="manager.project.form.button.invention" action="/member/invention/list?projectId=${id}"/>
+			<acme:button code="manager.project.form.button.campaign" action="/member/campaign/list?projectId=${id}"/>
 			
 			<acme:submit code="manager.project.form.button.update" action="/manager/project/update"/>
 			<acme:submit code="manager.project.form.button.delete" action="/manager/project/delete"/>

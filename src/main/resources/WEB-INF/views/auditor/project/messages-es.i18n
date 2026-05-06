@@ -1,0 +1,34 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2026 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for manager particular
+# purposes.  The copyright owner does not offer manager warranties or representations, nor do
+# they accept manager liabilities with respect to them.
+
+auditor.project.form.title = Detalles del proyecto 
+auditor.project.list.title = Lista de mis proyectos 
+
+
+auditor.project.list.label.keyWords = Palabras claves:
+auditor.project.list.label.title = Título:
+auditor.project.list.label.draftMode = Está en borrador: 
+
+
+auditor.project.form.label.title = Título:
+auditor.project.form.label.keyWords = Palabras claves:
+auditor.project.form.label.description = Descripción:
+auditor.project.form.label.kickOff = Momento de inicio:
+auditor.project.form.label.closeOut = Momento de cierre:
+auditor.project.form.label.personMonths = Meses por persona: 
+
+auditor.project.form.button.tactic = Tácticas
+auditor.project.form.button.invention = Invenciones
+auditor.project.form.button.campaign = Campañas
+auditor.project.form.button.report= Reportes
+
+
+
+
