@@ -14,7 +14,7 @@ import acme.entities.projects.Project;
 import acme.entities.projects.ProjectMember;
 
 @Repository
-public interface ManagerNewMemberRepository extends AbstractRepository {
+public interface ManagerProjectMemberRepository extends AbstractRepository {
 
 	@Query("select r.userAccount from AbstractRole r where type(r) in (Fundraiser, Inventor, Spokesperson)")
 	Collection<UserAccount> findUsersWithRoles();

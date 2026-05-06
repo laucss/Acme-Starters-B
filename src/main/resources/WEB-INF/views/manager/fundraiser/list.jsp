@@ -21,3 +21,8 @@
 	<acme:list-column code="manager.fundraiser.list.label.agent" path="agent" width="30%"/>
 </acme:list>
 
+<jstl:if test="${draftMode}">
+	<acme:button code="member.project-member.list.button.addFundraisers" action="/manager/project-member/create?projectId=${projectId}$role=FUNDRAISER"/>
+	<acme:button code="member.project-member.list.button.deteleFundraisers" action="/manager/project-member/delete?projectId=${projectId}$role=FUNDRAISER"/>
+</jstl:if>
+

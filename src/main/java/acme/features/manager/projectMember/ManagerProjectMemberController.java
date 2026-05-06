@@ -11,13 +11,13 @@ import acme.entities.projects.ProjectMember;
 import acme.realms.Manager;
 
 @Controller
-public class ManagerNewMemberController extends AbstractController<Manager, ProjectMember> {
+public class ManagerProjectMemberController extends AbstractController<Manager, ProjectMember> {
 
 	@PostConstruct
 	protected void initialise() {
 		super.setMediaType(MediaType.TEXT_HTML);
 
-		super.addBasicCommand("list", ManagerNewMemberListService.class);
+		// super.addBasicCommand("list", ManagerNewMemberListService.class);
 		// super.addBasicCommand("show", ManagerNewMemberListService.class);
 		//super.addBasicCommand("create", ManagerProjectCreateService.class);
 		//super.addBasicCommand("update", ManagerProjectUpdateService.class);

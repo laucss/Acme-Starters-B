@@ -54,6 +54,7 @@ public class ManagerFundraiserListService extends AbstractService<Manager, Fundr
 			"userAccount.username", "userAccount.identity.email", "bank", "agent");
 
 		super.unbindGlobal("projectId", this.project.getId());
+		super.unbindGlobal("draftMode", this.project.getDraftMode());
 
 	}
 
