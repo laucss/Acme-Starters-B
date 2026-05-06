@@ -25,12 +25,30 @@ public class AnyInventionListService extends AbstractService<Any, Invention> {
 
 	@Override
 	public void load() {
-		this.inventions = this.repository.findPublishedInventions();
+		Integer projectId = null;
+
+		if (super.getRequest().hasData("projectId"))
+			projectId = super.getRequest().getData("projectId", Integer.class);
+
+		if (projectId != null)
+			this.inventions = this.repository.findInventionsByProjectId(projectId);
+		else
+			this.inventions = this.repository.findPublishedInventions();
 	}
 
 	@Override
 	public void authorise() {
-		super.setAuthorised(true);
+		boolean status = true;
+
+		if (super.getRequest().hasData("projectId")) {
+			int projectId = super.getRequest().getData("projectId", int.class);
+
+			var project = this.repository.findProjectById(projectId);
+
+			status = project != null && !project.getDraftMode();
+		}
+
+		super.setAuthorised(status);
 	}
 
 	@Override

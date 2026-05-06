@@ -9,6 +9,7 @@ import acme.client.components.principals.UserAccount;
 import acme.client.helpers.PrincipalHelper;
 import acme.client.services.AbstractService;
 import acme.realms.Manager;
+import acme.realms.Member;
 
 @Service
 public class AuthenticatedManagerCreateService extends AbstractService<Authenticated, Manager> {
@@ -46,6 +47,16 @@ public class AuthenticatedManagerCreateService extends AbstractService<Authentic
 	@Override
 	public void bind() {
 		super.bindObject(this.manager, "position", "skills", "flag");
+		UserAccount cuenta = this.manager.getUserAccount();
+
+		if (cuenta != null) {
+			Member member = this.repository.findMemberById(cuenta.getId());
+			if (member == null) {
+				member = super.newObject(Member.class);
+				member.setUserAccount(cuenta);
+				this.repository.save(member);
+			}
+		}
 	}
 
 	@Override
