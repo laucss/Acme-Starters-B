@@ -1,0 +1,5 @@
+sponsor.sponsorship-assignment.form.title = Añadir patrocinio
+
+sponsor.sponsorship-assignment.list= Lista de patrocinios
+sponsor.sponsorship-assignment.button.create = Añadir
+sponsor.sponsorship-assignment.error.sponsorshipId.required  = Patrocinio necesario

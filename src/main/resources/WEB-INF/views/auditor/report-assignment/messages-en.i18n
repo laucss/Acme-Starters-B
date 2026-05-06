@@ -1,0 +1,5 @@
+auditor.report-assignment.form.title = Add Report
+
+auditor.report-assignment.list=Audit Reports list
+auditor.report-assignment.button.create = Add
+auditor.report-assignment.error.auditReportId.required = Audit Report Required

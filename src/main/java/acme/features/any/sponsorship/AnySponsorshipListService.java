@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import acme.client.components.principals.Any;
 import acme.client.services.AbstractService;
 import acme.entities.sponsorships.Sponsorship;
+import acme.realms.Sponsor;
 
 @Service
 public class AnySponsorshipListService extends AbstractService<Any, Sponsorship> {
@@ -25,16 +26,39 @@ public class AnySponsorshipListService extends AbstractService<Any, Sponsorship>
 
 	@Override
 	public void load() {
-		this.sponsorships = this.repository.findPublishedSponsorships();
+		Integer projectId = null;
+
+		if (super.getRequest().hasData("projectId"))
+			projectId = super.getRequest().getData("projectId", Integer.class);
+
+		if (projectId != null)
+			this.sponsorships = this.repository.findSponsorshipsByProjectId(projectId);
+		else
+			this.sponsorships = this.repository.findPublishedSponsorships();
+
 	}
 
 	@Override
 	public void authorise() {
-		super.setAuthorised(true);
+		boolean status = true;
+
+		if (super.getRequest().hasData("projectId")) {
+			int projectId = super.getRequest().getData("projectId", int.class);
+
+			var project = this.repository.findProjectById(projectId);
+
+			status = project != null && !project.getDraftMode();
+		}
+
+		super.setAuthorised(status);
 	}
 
 	@Override
 	public void unbind() {
+		Integer projectId = super.getRequest().hasData("projectId") ? super.getRequest().getData("projectId", Integer.class) : null;
+		boolean isSponsor = super.getRequest().getPrincipal().hasRealmOfType(Sponsor.class);
+		super.getResponse().addGlobal("projectId", projectId);
+		super.getResponse().addGlobal("isSponsor", isSponsor);
 		super.unbindObjects(this.sponsorships, //
 			"ticker", "name", "sponsor.userAccount.identity.fullName", "totalMoney");
 	}
