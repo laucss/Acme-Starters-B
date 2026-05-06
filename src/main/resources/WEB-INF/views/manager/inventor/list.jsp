@@ -16,9 +16,9 @@
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
 <acme:list>
-	<acme:list-column code="manager.inventor.list.label.username" path="userAccount.username" width="30%"/>
-	<acme:list-column code="manager.inventor.list.label.bio" path="bio" width="40%"/>
-	<acme:list-column code="manager.inventor.list.label.licensed" path="licensed" width="30%"/>
+	<acme:list-column code="manager.inventor.list.label.username" path="userAccount.username" width="20%"/>
+	<acme:list-column code="manager.inventor.list.label.bio" path="bio" width="60%"/>
+	<acme:list-column code="manager.inventor.list.label.licensed" path="licensed" width="20%"/>
 </acme:list>
 
 <jstl:if test="${draftMode}">

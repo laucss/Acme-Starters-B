@@ -16,9 +16,9 @@
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
 <acme:list>
-	<acme:list-column code="manager.fundraiser.list.label.username" path="userAccount.username" width="30%"/>
-	<acme:list-column code="manager.fundraiser.list.label.bank" path="bank" width="40%"/>
-	<acme:list-column code="manager.fundraiser.list.label.agent" path="agent" width="30%"/>
+	<acme:list-column code="manager.fundraiser.list.label.username" path="userAccount.username" width="20%"/>
+	<acme:list-column code="manager.fundraiser.list.label.bank" path="bank" width="60%"/>
+	<acme:list-column code="manager.fundraiser.list.label.agent" path="agent" width="20%"/>
 </acme:list>
 
 <jstl:if test="${draftMode}">

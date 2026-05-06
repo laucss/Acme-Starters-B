@@ -1,3 +1,4 @@
+<%--
 - list.jsp
 -
 - Copyright (C) 2012-2026 Rafael Corchuelo.
@@ -15,9 +16,9 @@
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
 <acme:list>
-	<acme:list-column code="manager.spokesperson.list.label.username" path="userAccount.username" width="30%"/>
-	<acme:list-column code="manager.spokesperson.list.label.cv" path="cv" width="40%"/>
-	<acme:list-column code="manager.spokesperson.list.label.licensed" path="licensed" width="30%"/>
+	<acme:list-column code="manager.spokesperson.list.label.username" path="userAccount.username" width="20%"/>
+	<acme:list-column code="manager.spokesperson.list.label.cv" path="cv" width="60%"/>
+	<acme:list-column code="manager.spokesperson.list.label.licensed" path="licensed" width="20%"/>
 </acme:list>
 
 <jstl:if test="${draftMode}">
