@@ -9,7 +9,7 @@
 # they accept member liabilities with respect to them.
 
 member.strategy.form.title = Detalles de la estrategia
-member.strategy.list.title = Lista de estrategias
+member.strategy.list.title = Lista de estrategias del proyecto
 
 member.strategy.form.label.name = Nombre:
 member.strategy.form.label.ticker = Referencia:
