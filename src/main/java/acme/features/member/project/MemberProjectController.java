@@ -1,5 +1,5 @@
 
-package acme.features.auditor.project;
+package acme.features.member.project;
 
 import javax.annotation.PostConstruct;
 
@@ -8,17 +8,17 @@ import org.springframework.stereotype.Controller;
 
 import acme.client.controllers.AbstractController;
 import acme.entities.projects.Project;
-import acme.realms.Auditor;
+import acme.realms.Member;
 
 @Controller
-public class AuditorProjectController extends AbstractController<Auditor, Project> {
+public class MemberProjectController extends AbstractController<Member, Project> {
 
 	@PostConstruct
 	protected void initialise() {
 		super.setMediaType(MediaType.TEXT_HTML);
 
-		super.addBasicCommand("list", AuditorProjectListService.class);
-		super.addBasicCommand("show", AuditorProjectShowService.class);
+		super.addBasicCommand("list", MemberProjectListService.class);
+		super.addBasicCommand("show", MemberProjectShowService.class);
 
 	}
 }
