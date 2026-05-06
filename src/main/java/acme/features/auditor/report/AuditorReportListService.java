@@ -38,7 +38,9 @@ public class AuditorReportListService extends AbstractService<Auditor, Report> {
 
 	@Override
 	public void unbind() {
-		super.unbindObjects(this.reports, "ticker", "name", "auditor.userAccount.identity.fullName", "description", "startMoment", "endMoment", "moreInfo", "monthsActive", "hours", "draftMode");
+		super.unbindObjects(this.reports, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "monthsActive", "hours", "draftMode");
+		super.getResponse().addGlobal("isAssignable", false);
+		super.getResponse().addGlobal("showCreate", true);
 	}
 
 }

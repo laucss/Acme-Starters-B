@@ -16,6 +16,7 @@
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
 <acme:form> 
+
 	<acme:form-textbox code="auditor.report.form.label.ticker" path="ticker"/>	
 	<acme:form-textbox code="auditor.report.form.label.name" path="name"/>
 	<acme:form-textarea code="auditor.report.form.label.description" path="description"/>
@@ -43,4 +44,5 @@
 			<acme:submit code="auditor.report.form.button.create" action="/auditor/report/create"/>
 		</jstl:when>		
 	</jstl:choose>
+
 </acme:form>

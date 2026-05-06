@@ -77,6 +77,11 @@ public class Report extends AbstractEntity {
 	@Column
 	private boolean				draftMode;
 
+	@Optional
+	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
+	@Column
+	private Date				projectUnassignMoment;
+
 	// Derived attributes -----------------------------------------------------
 
 	@Transient

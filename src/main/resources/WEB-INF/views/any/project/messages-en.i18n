@@ -10,6 +10,8 @@ any.project.form.label.closeOut = CloseOut:
 any.project.form.label.personMonths = PersonMonths:
 
 any.project.form.button.manager = Manager
+any.project.form.button.reports = Reports
+any.project.form.button.sponsorships = Sponsorships
 any.project.form.button.strategies = Strategies
 any.project.form.button.inventions = Inventions
 any.project.form.button.campaigns = Campaigns

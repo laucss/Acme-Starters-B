@@ -42,7 +42,9 @@ public class AuditorReportShowService extends AbstractService<Auditor, Report> {
 	@Override
 	public void unbind() {
 		Tuple tuple = super.unbindObject(this.report, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "monthsActive", "hours", "draftMode");
-		tuple.put("auditorId", this.report.getAuditor().getId());
-	}
 
+		tuple.put("auditorId", this.report.getAuditor().getId());
+
+		super.getResponse().addData(tuple);
+	}
 }

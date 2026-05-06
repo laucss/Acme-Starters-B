@@ -1,0 +1,5 @@
+sponsor.sponsorship-assignment.form.title = Add Sponsorship
+
+sponsor.sponsorship-assignment.list=Sponsorships list
+sponsor.sponsorship-assignment.button.create = Add
+sponsor.sponsorship-assignment.error.sponsorshipId.required = Sponsorship Required
