@@ -15,4 +15,6 @@ member.project-member.list.label.username = Nombre de usuario:
 member.project-member.list.label.email = Email:
 member.project-member.list.label.role = Rol:
 
-manager.user.list.button.add = Añadir miembros
+member.project-member.list.button.manageFundraisers = Gestionar recaudadores de fondos
+member.project-member.list.button.manageInventors = Gestionar inventores
+member.project-member.list.button.manageSpokespersons = Gestionar portavoces

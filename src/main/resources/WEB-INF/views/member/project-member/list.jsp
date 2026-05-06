@@ -22,5 +22,7 @@
 </acme:list>
 
 <jstl:if test="${showAdd}">
-	<acme:button code="member.user.list.button.add" action="/member/user-account/list"/>
+	<acme:button code="member.project-member.list.button.manageFundraisers" action="/member/user-account/list"/>
+	<acme:button code="member.project-member.list.button.manageInventors" action="/member/user-account/list"/>
+	<acme:button code="member.project-member.list.button.manageSpokespersons" action="/member/user-account/list"/>
 </jstl:if>

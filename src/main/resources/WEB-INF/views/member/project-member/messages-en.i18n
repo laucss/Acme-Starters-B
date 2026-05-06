@@ -9,7 +9,7 @@
 # they accept member liabilities with respect to them.
 
 
-member.project-member.list.title = List of the members
+member.project-member.list.title = List of members
 
 
 member.project-member.list.label.username = Username:
@@ -17,4 +17,6 @@ member.project-member.list.label.email = Email:
 member.project-member.list.label.role = Role:
 
 
-member.user.list.button.add = Add members
+member.project-member.list.button.manageFundraisers = Manage fundraisers
+member.project-member.list.button.manageInventors = Manage inventors
+member.project-member.list.button.manageSpokespersons = Manage spokespeople
