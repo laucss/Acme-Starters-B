@@ -82,7 +82,7 @@ public class ManagerProjectMemberCreateService extends AbstractService<Manager, 
 
 		if (cuenta != null) {
 			this.projectMember.setRole(role);
-			Member member = this.repository.findMemberById(cuenta.getId());
+			Member member = this.repository.findMemberByUserAccountId(cuenta.getId());
 			if (member == null) {
 				member = super.newObject(Member.class);
 				member.setUserAccount(cuenta);

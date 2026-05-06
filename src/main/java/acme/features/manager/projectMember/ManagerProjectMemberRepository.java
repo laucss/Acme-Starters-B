@@ -48,9 +48,15 @@ public interface ManagerProjectMemberRepository extends AbstractRepository {
 	Spokesperson findSpokespersonById(int spokespersonId);
 
 	@Query("select m from Member m where m.userAccount.id = :userAccountId")
-	Member findMemberById(int userAccountId);
+	Member findMemberByUserAccountId(int userAccountId);
 
 	@Query("select p from ProjectMember p where p.project.id = :projectId and p.id = :pmId")
 	ProjectMember findProjectMemberByIdAndProjectId(int projectId, int pmId);
+
+	@Query("select p from ProjectMember p where p.member.id = :memberId")
+	List<ProjectMember> findProjectMemberByMemberId(int memberId);
+
+	@Query("select m from Member m where m.id = :memberId")
+	Member findMemberById(int memberId);
 
 }

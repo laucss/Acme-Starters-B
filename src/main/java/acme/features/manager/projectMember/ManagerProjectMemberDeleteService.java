@@ -12,6 +12,7 @@ import acme.entities.projects.MemberRole;
 import acme.entities.projects.Project;
 import acme.entities.projects.ProjectMember;
 import acme.realms.Manager;
+import acme.realms.Member;
 
 @Service
 public class ManagerProjectMemberDeleteService extends AbstractService<Manager, ProjectMember> {
@@ -23,6 +24,7 @@ public class ManagerProjectMemberDeleteService extends AbstractService<Manager, 
 
 	private Project							project;
 	private ProjectMember					projectMember;
+	private Member							member;
 
 	// AbstractService interface -------------------------------------------
 
@@ -53,8 +55,12 @@ public class ManagerProjectMemberDeleteService extends AbstractService<Manager, 
 
 		ProjectMember pmSelected = this.repository.findProjectMemberByIdAndProjectId(this.project.getId(), selectedPMId);
 
-		if (pmSelected != null)
+		if (pmSelected != null) {
 			this.projectMember = pmSelected;
+			List<ProjectMember> userPMs = this.repository.findProjectMemberByMemberId(pmSelected.getMember().getId());
+			if (userPMs.size() == 1)
+				this.member = this.repository.findMemberById(pmSelected.getMember().getId());
+		}
 
 	}
 
@@ -69,6 +75,8 @@ public class ManagerProjectMemberDeleteService extends AbstractService<Manager, 
 	@Override
 	public void execute() {
 		this.repository.delete(this.projectMember);
+		if (this.member != null)
+			this.repository.delete(this.member);
 	}
 
 	@Override
