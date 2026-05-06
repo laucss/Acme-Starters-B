@@ -64,21 +64,22 @@ public class ManagerProjectMemberCreateService extends AbstractService<Manager, 
 
 		UserAccount cuenta = null;
 
-		if ("FUNDRAISER".equals(roleUrl)) {
-			Fundraiser fundraiser = this.repository.findFundraiserById(selectedUserId);
-			cuenta = fundraiser.getUserAccount();
-			role = MemberRole.FUNDRAISER;
-			//
-		} else if ("INVENTOR".equals(roleUrl)) {
-			Inventor inventor = this.repository.findInventorById(selectedUserId);
-			cuenta = inventor.getUserAccount();
-			role = MemberRole.INVENTOR;
-			//
-		} else if ("SPOKESPERSON".equals(roleUrl)) {
-			Spokesperson spokesperson = this.repository.findSpokespersonById(selectedUserId);
-			cuenta = spokesperson.getUserAccount();
-			role = MemberRole.SPOKESPERSON;
-		}
+		if (selectedUserId != 0)
+			if ("FUNDRAISER".equals(roleUrl)) {
+				Fundraiser fundraiser = this.repository.findFundraiserById(selectedUserId);
+				cuenta = fundraiser.getUserAccount();
+				role = MemberRole.FUNDRAISER;
+				//
+			} else if ("INVENTOR".equals(roleUrl)) {
+				Inventor inventor = this.repository.findInventorById(selectedUserId);
+				cuenta = inventor.getUserAccount();
+				role = MemberRole.INVENTOR;
+				//
+			} else if ("SPOKESPERSON".equals(roleUrl)) {
+				Spokesperson spokesperson = this.repository.findSpokespersonById(selectedUserId);
+				cuenta = spokesperson.getUserAccount();
+				role = MemberRole.SPOKESPERSON;
+			}
 
 		if (cuenta != null) {
 			this.projectMember.setRole(role);

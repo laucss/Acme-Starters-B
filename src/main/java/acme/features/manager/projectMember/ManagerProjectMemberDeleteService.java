@@ -68,8 +68,8 @@ public class ManagerProjectMemberDeleteService extends AbstractService<Manager, 
 	public void validate() {
 		super.validateObject(this.projectMember);
 
-		//if (this.projectMember.getMember() == null)
-		//super.state(false, "selected", "projectMember.create.validation.NoUserSelected");
+		if (this.projectMember.getMember() == null)
+			super.state(false, "selected", "projectMember.create.validation.NoUserSelected");
 	}
 
 	@Override
