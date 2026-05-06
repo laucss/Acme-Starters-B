@@ -47,13 +47,21 @@ public class ManagerProjectPublishService extends AbstractService<Manager, Proje
 
 	@Override
 	public void validate() {
+		super.validateObject(this.project);
+
 		boolean kickOffIsBeforecloseOut;
 		if (this.project.getKickOff() != null && this.project.getCloseOut() != null) {
 			kickOffIsBeforecloseOut = MomentHelper.isBefore(this.project.getKickOff(), this.project.getCloseOut());
 
 			super.state(kickOffIsBeforecloseOut, "*", "acme.validation.invalid-project-time-interval.message");
 		}
-		super.validateObject(this.project);
+		boolean hasAtLeastOnePart;
+
+		Long count = this.repository.computeInventionByProjects(this.project.getId());
+		Long invention = count == null ? 0 : count;
+		hasAtLeastOnePart = Boolean.TRUE.equals(this.project.getDraftMode()) && invention > 0;
+
+		super.state(hasAtLeastOnePart, "*", "acme.validation.project.published-without-inventions.message");
 	}
 
 	@Override

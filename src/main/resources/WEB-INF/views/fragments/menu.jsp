@@ -92,6 +92,7 @@
     	<%-- MANAGER --%>
       	  <acme:menu-option code="master.menu.manager" access="hasRealm('Manager')">
         	<acme:menu-suboption code="master.menu.manager.my-projects" action="/manager/project/list"/>
+        	<acme:menu-suboption code="master.menu.manager.show-dashboard" action="/manager/dashboard/show" />
 	    </acme:menu-option>
 	    
 	</acme:menu-left>

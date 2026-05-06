@@ -9,7 +9,6 @@ import org.springframework.stereotype.Controller;
 import acme.client.controllers.AbstractController;
 import acme.entities.projects.Project;
 import acme.realms.Auditor;
-import acme.realms.Inventor;
 
 @Controller
 public class AuditorProjectController extends AbstractController<Auditor, Project> {

@@ -34,7 +34,7 @@ acme.validation.sponsorship.published-without-donations.message = A sponsorship 
  
 acme.validation.report.published-without-sections.message = A report cannot be published unless it has at least one section
 
-
+acme.validation.project.published-without-inventions.message = A project cannot be published unless they have at least one invention
 
 acme.validation.duplicated-title.message = The title is duplicated
 

@@ -1,6 +1,6 @@
 key,ticker,name,description,start-moment,end-moment,more-info,draft-mode,key:inventor,key:project
 # base entity
-invention-01,TK00-abc00,"Invention","Description of invention",2025/01/01 00:01,2200/12/31 23:59,http://www.acme.com/inventions,false,inventor-01,project-01
+invention-01,TK00-abc00,"Invention","Description of invention",2025/01/01 00:01,2200/12/31 23:59,http://www.acme.com/inventions,true,inventor-01,project-01
 # ticker standard variations
 invention-02,TK00-abc001,"Invention","Description of invention",2025/01/01 00:01,2200/12/31 23:59,http://www.acme.com/inventions,false,inventor-01,project-01
 invention-03,TK00-abc001abc,"Invention","Description of invention",2025/01/01 00:01,2200/12/31 23:59,http://www.acme.com/inventions,false,inventor-01,project-02
