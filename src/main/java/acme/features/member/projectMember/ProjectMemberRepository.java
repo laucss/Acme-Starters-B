@@ -13,10 +13,10 @@ import acme.entities.projects.ProjectMember;
 @Repository
 public interface ProjectMemberRepository extends AbstractRepository {
 
-	@Query("select pm FROM ProjectMember pm where pm.project.id = :projectId")
+	@Query("select pm from ProjectMember pm where pm.project.id = :projectId")
 	List<ProjectMember> findProjectMembersByProjectId(int projectId);
 
-	@Query("select p FROM Project p where p.id = :projectId")
+	@Query("select p from Project p where p.id = :projectId")
 	Project findProjectById(int projectId);
 
 }
