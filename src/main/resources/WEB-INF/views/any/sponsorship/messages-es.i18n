@@ -23,6 +23,8 @@ any.sponsorship.form.label.totalMoney = Dinero total:
 
 any.sponsorship.form.button.donations = Donaciones
 any.sponsorship.form.button.sponsor = Patrocinador
+any.project.button.sponsor.create = Añadir
+sponsor.sponsorship.button.unassign = Desasignar Proyecto
 
 any.sponsorship.list.label.ticker = Referencia 
 any.sponsorship.list.label.name = Nombre

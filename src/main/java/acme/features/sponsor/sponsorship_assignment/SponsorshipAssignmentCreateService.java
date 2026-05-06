@@ -1,0 +1,82 @@
+
+package acme.features.sponsor.sponsorship_assignment;
+
+import java.time.temporal.ChronoUnit;
+import java.util.Collection;
+import java.util.Date;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import acme.client.components.views.SelectChoices;
+import acme.client.helpers.MomentHelper;
+import acme.client.services.AbstractService;
+import acme.entities.projects.Project;
+import acme.entities.sponsorships.Sponsorship;
+import acme.forms.SponsorshipAssignment;
+import acme.realms.Sponsor;
+
+@Service
+
+public class SponsorshipAssignmentCreateService extends AbstractService<Sponsor, SponsorshipAssignment> {
+
+	@Autowired
+	private SponsorshipAssignmentRepository	repository;
+	private SponsorshipAssignment			sponsorShipAssigment;
+	private Collection<Sponsorship>			sponsorships;
+	private Project							project;
+
+
+	@Override
+	public void load() {
+		int projectId = super.getRequest().getData("projectId", int.class);
+		this.project = this.repository.findProjectById(projectId);
+		int sponsorId = super.getRequest().getPrincipal().getActiveRealm().getId();
+		this.sponsorships = this.repository.findAvailableSponsorshipsBySponsorId(sponsorId);
+		this.sponsorShipAssigment = super.newObject(SponsorshipAssignment.class);
+		this.sponsorShipAssigment.setProjectId(projectId);
+
+	}
+
+	@Override
+	public void authorise() {
+		boolean status;
+		status = this.project != null && !this.project.getDraftMode();
+		super.setAuthorised(status);
+	}
+
+	@Override
+	public void bind() {
+		int projectId = super.getRequest().getData("projectId", int.class);
+		super.bindObject(this.sponsorShipAssigment, "sponsorshipId");
+		this.sponsorShipAssigment.setProjectId(projectId);
+	}
+
+	@Override
+	public void validate() {
+		super.validateObject(this.sponsorShipAssigment);
+		boolean hasSponsorship = this.sponsorShipAssigment.getSponsorshipId() != 0;
+		super.state(hasSponsorship, "sponsorshipId", "sponsor.sponsorship-assignment.error.sponsorshipId.required");
+	}
+
+	@Override
+	public void execute() {
+		Sponsorship sponsorship = this.repository.findSponsorshipById(this.sponsorShipAssigment.getSponsorshipId());
+		if (sponsorship != null) {
+			Date projectUnassignMoment = MomentHelper.deltaFromCurrentMoment(24, ChronoUnit.HOURS);
+			sponsorship.setProjectUnassignMoment(projectUnassignMoment);
+			sponsorship.setProject(this.project);
+			this.repository.save(sponsorship);
+		}
+	}
+
+	@Override
+	public void unbind() {
+		SelectChoices choices;
+		choices = SelectChoices.from(this.sponsorships, "ticker", null);
+		super.unbindObject(this.sponsorShipAssigment, "sponsorshipId");
+		super.unbindGlobal("listaSponsorships", choices);
+		super.unbindGlobal("projectId", this.project.getId());
+	}
+
+}

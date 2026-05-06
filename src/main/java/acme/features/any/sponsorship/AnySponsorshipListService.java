@@ -58,7 +58,7 @@ public class AnySponsorshipListService extends AbstractService<Any, Sponsorship>
 		Integer projectId = super.getRequest().hasData("projectId") ? super.getRequest().getData("projectId", Integer.class) : null;
 		boolean isSponsor = super.getRequest().getPrincipal().hasRealmOfType(Sponsor.class);
 		super.getResponse().addGlobal("projectId", projectId);
-		super.getResponse().addGlobal("isAuditor", isSponsor);
+		super.getResponse().addGlobal("isSponsor", isSponsor);
 		super.unbindObjects(this.sponsorships, //
 			"ticker", "name", "sponsor.userAccount.identity.fullName", "totalMoney");
 	}
