@@ -1,0 +1,13 @@
+
+<%@page%>
+
+<%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="acme" uri="http://acme-framework.org/"%>
+
+<acme:form>
+	<acme:form-textbox code="member.inventor.form.label.fullName" path="userAccount.identity.fullName"/>
+	<acme:form-textbox code="member.inventor.form.label.email" path="userAccount.identity.email"/>
+	<acme:form-textarea code="member.inventor.form.label.bio" path="bio"/>
+	<acme:form-textarea code="member.inventor.form.label.keyWords" path="keyWords"/>
+	<acme:form-checkbox code="member.inventor.form.label.licensed" path="licensed"/>
+</acme:form>

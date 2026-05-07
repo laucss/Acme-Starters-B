@@ -1,0 +1,9 @@
+
+member.inventor.form.title = Details of inventor
+
+member.inventor.form.label.fullName = Name:
+member.inventor.form.label.email = E-mail:
+member.inventor.form.label.bio = Biography:
+member.inventor.form.label.keyWords = Key words:
+member.inventor.form.label.licensed = Licensed:
+
