@@ -46,8 +46,11 @@ public class AnyReportShowService extends AbstractService<Any, Report> {
 			super.unbindGlobal("title", this.report.getProject().getTitle());
 			if (this.report.getAuditor().getUserAccount().getId() == super.getRequest().getPrincipal().getAccountId()) {
 				super.unbindGlobal("projectId", this.report.getProject().getId());
-				if (this.report.getProjectUnassignMoment() != null && MomentHelper.getCurrentMoment().before(this.report.getProjectUnassignMoment()))
+				if (this.report.getProjectUnassignMoment() != null && MomentHelper.getCurrentMoment().before(this.report.getProjectUnassignMoment())) {
+					boolean caso = this.report.getProjectUnassignMoment() != null && MomentHelper.getCurrentMoment().before(this.report.getProjectUnassignMoment());
 					super.unbindGlobal("projectUnassignMoment", true);
+				}
+
 			}
 
 		}
