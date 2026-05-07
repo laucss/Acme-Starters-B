@@ -34,3 +34,4 @@ member.campaign.list.label.effort = Effort :
 member.campaign.list.label.draftMode = Is in draft mode: 
 
 member.campaign.list.button.create = Create
+member.project.button.spokesperson.create = Add Campaign

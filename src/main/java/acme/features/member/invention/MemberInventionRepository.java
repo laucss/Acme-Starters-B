@@ -15,4 +15,7 @@ public interface MemberInventionRepository extends AbstractRepository {
 	@Query("select i from Invention i where i.project.id = :projectId")
 	Collection<Invention> findInventionsByProjectId(int projectId);
 
+	@Query("select count(mp) from ProjectMember mp where mp.project.id = :projectId and mp.member.id = :memberId")
+	Integer checkProjectBelongsToMember(int projectId, int memberId);
+
 }

@@ -32,5 +32,6 @@ member.strategy.list.label.expectedPercentage = Expected percentage:
 member.strategy.list.label.draftMode = Is in draft mode: 
 
 member.strategy.list.button.create = Create
+member.project.button.fundraiser.create = Add Strategy
 
 

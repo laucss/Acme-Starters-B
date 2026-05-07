@@ -33,3 +33,4 @@ member.campaign.list.label.effort = Esfuerzo :
 member.campaign.list.label.draftMode = Está en modo borrador: 
 
 member.campaign.list.button.create = Crear
+member.project.button.spokesperson.create = Añadir Campaña
