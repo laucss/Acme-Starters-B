@@ -18,12 +18,8 @@ public class ManagerSpokespersonController extends AbstractController<Manager, S
 		super.setMediaType(MediaType.TEXT_HTML);
 
 		super.addBasicCommand("list", ManagerSpokespersonListService.class);
-		// super.addBasicCommand("show", ManagerNewMemberListService.class);
-		//super.addBasicCommand("create", ManagerProjectCreateService.class);
-		//super.addBasicCommand("update", ManagerProjectUpdateService.class);
-		//super.addBasicCommand("delete", ManagerProjectDeleteService.class);
+		super.addBasicCommand("show", ManagerSpokespersonShowService.class);
 
-		//super.addCustomCommand("publish", "update", FundraiserStrategyPublishService.class);
 	}
 
 }

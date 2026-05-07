@@ -10,6 +10,7 @@
 
 
 manager.fundraiser.list.title = Lista de los recaudadores de fondos miembros
+manager.fundraiser.form.title = Datos del recaudador de fondos
 
 
 manager.fundraiser.list.label.username = Nombre de usuario:
@@ -19,3 +20,7 @@ manager.fundraiser.list.label.agent = Agente:
 
 member.project-member.list.button.addFundraisers = Añadir recaudador
 member.project-member.list.button.deteleFundraisers = Eliminar recaudador
+
+manager.fundraiser.form.label.bank = Banco
+manager.fundraiser.form.label.statement = Declaración
+manager.fundraiser.form.label.agent = Agente

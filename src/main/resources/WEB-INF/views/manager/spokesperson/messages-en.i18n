@@ -10,6 +10,7 @@
 
 
 manager.spokesperson.list.title = List of spokespersons members
+manager.spokesperson.form.title = Spokesperson form
 
 
 manager.spokesperson.list.label.username = Username:
@@ -19,3 +20,7 @@ manager.spokesperson.list.label.licensed = Licensed:
 
 member.project-member.list.button.addSpokespersons = Add spokesperson
 member.project-member.list.button.deteleSpokespersons = Delete spokesperson
+
+manager.spokesperson.form.label.cv = CV
+manager.spokesperson.form.label.achievements = Achievements
+manager.spokesperson.form.label.licensed = Licensed

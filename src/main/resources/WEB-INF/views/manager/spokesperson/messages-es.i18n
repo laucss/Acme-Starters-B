@@ -10,6 +10,7 @@
 
 
 manager.spokesperson.list.title = Lista de portavoces miembros
+manager.spokesperson.form.title = Datos de portavoz
 
 
 manager.spokesperson.list.label.username = Nombre de usuario:
@@ -19,3 +20,7 @@ manager.spokesperson.list.label.licensed = Licencia:
 
 member.project-member.list.button.addSpokespersons = Añadir portavoz
 member.project-member.list.button.deteleSpokespersons = Eliminar portavoz
+
+manager.spokesperson.form.label.cv = CV
+manager.spokesperson.form.label.achievements = Logros
+manager.spokesperson.form.label.licensed = Licenciado

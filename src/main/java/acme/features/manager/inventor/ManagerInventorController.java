@@ -18,12 +18,8 @@ public class ManagerInventorController extends AbstractController<Manager, Inven
 		super.setMediaType(MediaType.TEXT_HTML);
 
 		super.addBasicCommand("list", ManagerInventorListService.class);
-		// super.addBasicCommand("show", ManagerNewMemberListService.class);
-		//super.addBasicCommand("create", ManagerProjectCreateService.class);
-		//super.addBasicCommand("update", ManagerProjectUpdateService.class);
-		//super.addBasicCommand("delete", ManagerProjectDeleteService.class);
+		super.addBasicCommand("show", ManagerInventorShowService.class);
 
-		//super.addCustomCommand("publish", "update", FundraiserStrategyPublishService.class);
 	}
 
 }

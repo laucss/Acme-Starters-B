@@ -24,4 +24,7 @@ public interface ManagerFundraiserRepository extends AbstractRepository {
 	@Query("select p from Project p where p.id = :projectId")
 	Project findProjectById(int projectId);
 
+	@Query("select f from Fundraiser f where f.id = :fundraiserId")
+	Fundraiser findFundraiserById(int fundraiserId);
+
 }
