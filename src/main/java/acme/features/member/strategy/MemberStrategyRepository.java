@@ -18,4 +18,7 @@ public interface MemberStrategyRepository extends AbstractRepository {
 	@Query("select count(mp) from ProjectMember mp where mp.project.id = :projectId and mp.member.id = :memberId")
 	Integer checkProjectBelongsToMember(int projectId, int memberId);
 
+	@Query("select s from Strategy s where s.id = :id")
+	Strategy findStrategyById(int id);
+
 }

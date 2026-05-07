@@ -28,4 +28,8 @@
 	<acme:button code="member.campaign.form.button.milestones" action="/member/milestone/list?campaignId=${id}"/>
 	<acme:button code="member.campaign.form.button.spokesperson" action="/member/spokesperson/show?id=${spokespersonId}"/>
 	
+	  <jstl:if test="${projectId != null}">
+		<acme:submit code="member.campaign.button.unassign" action="/spokesperson/campaign/unassign?campaignId=${id}"/>
+	 </jstl:if>
+	
 </acme:form>

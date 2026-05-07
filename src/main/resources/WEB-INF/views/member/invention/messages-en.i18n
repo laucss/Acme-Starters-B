@@ -24,4 +24,6 @@ member.invention.list.label.cost = Cost
 
 member.invention.list.button.create = Create
 member.project.button.inventor.create= Add Invention 
+member.invention.button.unassign = Unassign Invention
+member.invention.form.button.inventor = Inventor
 

@@ -28,5 +28,9 @@
 	<acme:button code="member.strategy.form.button.tactic" action="/member/tactic/list?strategyId=${id}"/>
 	<acme:button code="member.strategy.form.button.fundraiser" action="/member/fundraiser/show?id=${fundraiserId}"/>
 	
+	<jstl:if test="${projectId != null}">
+		<acme:submit code="member.strategy.button.unassign" action="/fundraiser/strategy/unassign?strategyId=${id}"/>
+	</jstl:if>   
+	
 		
 </acme:form>
