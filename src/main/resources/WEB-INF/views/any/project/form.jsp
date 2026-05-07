@@ -18,4 +18,6 @@
 	<acme:button code="any.project.form.button.strategies" action="/any/strategy/list?projectId=${id}"/>
 	<acme:button code="any.project.form.button.inventions" action="/any/invention/list?projectId=${id}"/>
 	<acme:button code="any.project.form.button.campaigns" action="/any/campaign/list?projectId=${id}"/>
+	
+	<acme:button code="member.project.form.button.member" action="/any/project-member/list?projectId=${id}"/>
 </acme:form>
