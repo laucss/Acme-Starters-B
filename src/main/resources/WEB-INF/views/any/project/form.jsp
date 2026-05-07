@@ -15,4 +15,7 @@
 	<acme:button code="any.project.form.button.manager" action="/any/manager/show?id=${managerId}"/>
 	<acme:button code="any.project.form.button.reports" action="/any/report/list?projectId=${id}"/>
 	<acme:button code="any.project.form.button.sponsorships" action="/any/sponsorship/list?projectId=${id}"/>
+	<acme:button code="any.project.form.button.strategies" action="/any/strategy/list?projectId=${id}"/>
+	<acme:button code="any.project.form.button.inventions" action="/any/invention/list?projectId=${id}"/>
+	<acme:button code="any.project.form.button.campaigns" action="/any/campaign/list?projectId=${id}"/>
 </acme:form>

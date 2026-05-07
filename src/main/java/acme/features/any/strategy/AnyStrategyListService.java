@@ -25,12 +25,30 @@ public class AnyStrategyListService extends AbstractService<Any, Strategy> {
 
 	@Override
 	public void load() {
-		this.strategies = this.repository.findPublishedStrategies();
+		Integer projectId = null;
+
+		if (super.getRequest().hasData("projectId"))
+			projectId = super.getRequest().getData("projectId", Integer.class);
+
+		if (projectId != null)
+			this.strategies = this.repository.findStrategiesByProjectId(projectId);
+		else
+			this.strategies = this.repository.findPublishedStrategies();
 	}
 
 	@Override
 	public void authorise() {
-		super.setAuthorised(true);
+		boolean status = true;
+
+		if (super.getRequest().hasData("projectId")) {
+			int projectId = super.getRequest().getData("projectId", int.class);
+
+			var project = this.repository.findProjectById(projectId);
+
+			status = project != null && !project.getDraftMode();
+		}
+
+		super.setAuthorised(status);
 	}
 
 	@Override
