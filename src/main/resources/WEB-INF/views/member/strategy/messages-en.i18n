@@ -9,7 +9,7 @@
 # they accept member liabilities with respect to them.
 
 member.strategy.form.title = Strategy form
-member.strategy.list.title = Listing of my strategies
+member.strategy.list.title = Listing of project strategies
 
 member.strategy.form.label.name = Name:
 member.strategy.form.label.ticker = Ticker:

@@ -9,9 +9,12 @@ import org.springframework.stereotype.Repository;
 
 import acme.client.components.principals.UserAccount;
 import acme.client.repositories.AbstractRepository;
+import acme.entities.campaigns.Campaign;
+import acme.entities.inventions.Invention;
 import acme.entities.projects.MemberRole;
 import acme.entities.projects.Project;
 import acme.entities.projects.ProjectMember;
+import acme.entities.strategies.Strategy;
 import acme.realms.Fundraiser;
 import acme.realms.Inventor;
 import acme.realms.Member;
@@ -58,5 +61,23 @@ public interface ManagerProjectMemberRepository extends AbstractRepository {
 
 	@Query("select m from Member m where m.id = :memberId")
 	Member findMemberById(int memberId);
+
+	@Query("select f from Fundraiser f where f.userAccount.id = :id")
+	Fundraiser findFundraiserByUserAccountId(int id);
+
+	@Query("select f from Inventor f where f.userAccount.id = :id")
+	Inventor findInventorByUserAccountId(int id);
+
+	@Query("select f from Spokesperson f where f.userAccount.id = :id")
+	Spokesperson findSpokespersonByUserAccountId(int id);
+
+	@Query("select s from Strategy s where s.fundraiser.id = :fundraiserId and s.project.id =:projectId")
+	List<Strategy> findStrategiesByFundraiserIdAndProjectId(int fundraiserId, int projectId);
+
+	@Query("select i from Invention i where i.inventor.id = :inventorId and i.project.id =:projectId")
+	List<Invention> findInventionsByInventorIdAndProjectId(int inventorId, int projectId);
+
+	@Query("select c from Campaign c where c.spokesperson.id = :spokespersonId and c.project.id =:projectId")
+	List<Campaign> findCampaignBySpokespersonIdAndProjectId(int spokespersonId, int projectId);
 
 }
