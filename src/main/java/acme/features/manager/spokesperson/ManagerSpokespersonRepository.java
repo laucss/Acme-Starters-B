@@ -24,4 +24,7 @@ public interface ManagerSpokespersonRepository extends AbstractRepository {
 	@Query("select p from Project p where p.id = :projectId")
 	Project findProjectById(int projectId);
 
+	@Query("select s from Spokesperson s where s.id = :spokespersonId")
+	Spokesperson findSpokespersonById(int spokespersonId);
+
 }

@@ -10,6 +10,7 @@
 
 
 manager.fundraiser.list.title = List of fundraisers members
+manager.fundraiser.form.title = Fundraiser form
 
 
 manager.fundraiser.list.label.username = Username:
@@ -19,3 +20,7 @@ manager.fundraiser.list.label.agent = Agent:
 
 member.project-member.list.button.addFundraisers = Add fundraiser
 member.project-member.list.button.deteleFundraisers = Delete fundraiser
+
+manager.fundraiser.form.label.bank = Bank
+manager.fundraiser.form.label.statement = Statement
+manager.fundraiser.form.label.agent = Agent

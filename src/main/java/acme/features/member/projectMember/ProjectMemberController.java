@@ -18,7 +18,7 @@ public class ProjectMemberController extends AbstractController<Member, ProjectM
 		super.setMediaType(MediaType.TEXT_HTML);
 
 		super.addBasicCommand("list", ProjectMemberListService.class);
-		// super.addBasicCommand("show", ManagerProjectShowService.class);
+		super.addBasicCommand("show", ProjectMemberShowService.class);
 		//super.addBasicCommand("create", ManagerProjectCreateService.class);
 		//super.addBasicCommand("update", ManagerProjectUpdateService.class);
 		//super.addBasicCommand("delete", ManagerProjectDeleteService.class);

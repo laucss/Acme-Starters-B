@@ -10,6 +10,7 @@
 
 
 manager.inventor.list.title = Lista de inventores miembros
+manager.inventor.form.title = Datos de inventor
 
 manager.inventor.list.label.username = Nombre de usuario:
 manager.inventor.list.label.bio = Biografía:
@@ -18,3 +19,7 @@ manager.inventor.list.label.licensed = Licencia:
 
 member.project-member.list.button.addInventors = Añadir inventor
 member.project-member.list.button.deteleInventors = Eliminar inventor
+
+manager.inventor.form.label.keyWords = Palabras claves:
+manager.inventor.form.label.bio = Biografía:
+manager.inventor.form.label.licensed = Licencia:

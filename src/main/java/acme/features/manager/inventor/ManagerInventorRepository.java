@@ -24,4 +24,7 @@ public interface ManagerInventorRepository extends AbstractRepository {
 	@Query("select p from Project p where p.id = :projectId")
 	Project findProjectById(int projectId);
 
+	@Query("select i from Inventor i where i.id = :inventorId")
+	Inventor findInventorById(int inventorId);
+
 }

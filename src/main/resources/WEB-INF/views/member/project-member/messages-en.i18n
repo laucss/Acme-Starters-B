@@ -10,6 +10,7 @@
 
 
 member.project-member.list.title = List of members
+member.project-member.form.title = Details of the member
 
 
 member.project-member.list.label.username = Username:
@@ -20,3 +21,21 @@ member.project-member.list.label.role = Role:
 member.project-member.list.button.manageFundraisers = Manage fundraisers
 member.project-member.list.button.manageInventors = Manage inventors
 member.project-member.list.button.manageSpokespersons = Manage spokespeople
+
+member.project-member.form.label.username = Username: 
+member.project-member.form.label.name = Name: 
+member.project-member.form.label.surname = Surname: 
+member.project-member.form.label.email = Email:
+member.project-member.form.label.role = Role:
+
+member.project-member.form.label.bank = Bank:
+member.project-member.form.label.statement = Statement:
+member.project-member.form.label.agent = Agent:
+
+member.project-member.form.label.bio = Bio:
+member.project-member.form.label.keyWords = Key words:
+member.project-member.form.label.licensed = Licensed:
+
+member.project-member.form.label.cv = CV:
+member.project-member.form.label.achievements = Achievements:
+member.project-member.form.label.licensed = Licensed:

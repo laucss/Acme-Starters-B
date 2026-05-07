@@ -18,12 +18,8 @@ public class ManagerFundraiserController extends AbstractController<Manager, Fun
 		super.setMediaType(MediaType.TEXT_HTML);
 
 		super.addBasicCommand("list", ManagerFundraiserListService.class);
-		// super.addBasicCommand("show", ManagerNewMemberListService.class);
-		//super.addBasicCommand("create", ManagerProjectCreateService.class);
-		//super.addBasicCommand("update", ManagerProjectUpdateService.class);
-		//super.addBasicCommand("delete", ManagerProjectDeleteService.class);
+		super.addBasicCommand("show", ManagerFundraiserShowService.class);
 
-		//super.addCustomCommand("publish", "update", FundraiserStrategyPublishService.class);
 	}
 
 }
