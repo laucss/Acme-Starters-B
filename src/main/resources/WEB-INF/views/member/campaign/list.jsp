@@ -27,3 +27,7 @@
 	<acme:list-hidden path="monthsActive"/>
 
 </acme:list>
+
+<jstl:if test="${isSpokesperson && draftMode}">
+     <acme:button code="member.project.button.spokesperson.create" action="/spokesperson/campaign-assignment/create?projectId=${projectId}"/>
+</jstl:if>

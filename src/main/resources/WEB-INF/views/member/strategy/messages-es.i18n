@@ -32,4 +32,5 @@ member.strategy.list.label.expectedPercentage = Porcentaje esperado:
 member.strategy.list.label.draftMode = Está en modo borrador:
 
 member.strategy.list.button.create = Crear
+member.project.button.fundraiser.create = Añadir Estrategia
 

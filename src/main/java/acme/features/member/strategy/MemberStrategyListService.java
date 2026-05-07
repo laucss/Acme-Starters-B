@@ -7,7 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.services.AbstractService;
+import acme.entities.projects.Project;
 import acme.entities.strategies.Strategy;
+import acme.features.member.project.MemberProjectRepository;
+import acme.realms.Fundraiser;
 import acme.realms.Member;
 
 @Service
@@ -20,6 +23,10 @@ public class MemberStrategyListService extends AbstractService<Member, Strategy>
 
 	private Collection<Strategy>		strategies;
 
+	@Autowired
+	private MemberProjectRepository		projectRepository;
+	private Project						project;
+
 	// AbstractService interface -------------------------------------------
 
 
@@ -29,17 +36,33 @@ public class MemberStrategyListService extends AbstractService<Member, Strategy>
 
 		projectId = super.getRequest().getData("projectId", int.class);
 		this.strategies = this.repository.findStrategiesByProjectId(projectId);
+		this.project = this.projectRepository.findProjectById(projectId);
 	}
 
 	@Override
 	public void authorise() {
-		super.setAuthorised(true);
+		boolean status = false;
+
+		int memberId = super.getRequest().getPrincipal().getActiveRealm().getId();
+
+		if (this.project != null) {
+			Integer count = this.repository.checkProjectBelongsToMember(this.project.getId(), memberId);
+
+			status = count != null && count > 0;
+		}
+		super.setAuthorised(status);
 	}
 
 	@Override
 	public void unbind() {
 		super.unbindObjects(this.strategies, //
 			"ticker", "name", "draftMode", "expectedPercentage");
+		super.unbindGlobal("draftMode", this.project.getDraftMode());
+		boolean isFundraiser = super.getRequest().getPrincipal().getRealms().stream().anyMatch(Fundraiser.class::isInstance);
+		if (super.getRequest().hasData("projectId")) {
+			super.unbindGlobal("isFundraiser", isFundraiser);
+			super.unbindGlobal("projectId", this.project.getId());
+		}
 	}
 
 }
