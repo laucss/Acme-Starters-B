@@ -33,5 +33,8 @@ member.strategy.list.label.draftMode = Is in draft mode:
 
 member.strategy.list.button.create = Create
 member.project.button.fundraiser.create = Add Strategy
+member.strategy.button.unassign = Unassign Strategy
+
+member.strategy.form.button.fundraiser= Fundraiser
 
 

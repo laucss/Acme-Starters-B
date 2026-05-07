@@ -20,7 +20,7 @@ public class MemberStrategyController extends AbstractController<Member, Strateg
 		super.setMediaType(MediaType.TEXT_HTML);
 
 		super.addBasicCommand("list", MemberStrategyListService.class);
-		// super.addBasicCommand("show", FundraiserStrategyShowService.class);
+		super.addBasicCommand("show", MemberStrategyShowService.class);
 		// super.addBasicCommand("create", FundraiserStrategyCreateService.class);
 		// super.addBasicCommand("update", FundraiserStrategyUpdateService.class);
 		// super.addBasicCommand("delete", FundraiserStrategyDeleteService.class);

@@ -20,7 +20,8 @@ member.campaign.form.label.startMoment = Momento de inicio:
 member.campaign.form.label.endMoment = Momento de fin:
 member.campaign.form.label.moreInfo = Más información (opcional):
 
-member.campaign.form.button.milestone = Hitos
+member.campaign.form.button.milestones = Hitos
+member.campaign.form.button.spokesperson = Portavoz
 
 member.campaign.form.button.update = Actualizar
 member.campaign.form.button.delete = Eliminar
@@ -34,3 +35,4 @@ member.campaign.list.label.draftMode = Está en modo borrador:
 
 member.campaign.list.button.create = Crear
 member.project.button.spokesperson.create = Añadir Campaña
+member.campaign.button.unassign = Desasignar Campaña
