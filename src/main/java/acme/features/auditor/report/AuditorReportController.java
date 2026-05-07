@@ -26,6 +26,7 @@ public class AuditorReportController extends AbstractController<Auditor, Report>
 		super.addBasicCommand("delete", AuditorReportDeleteService.class);
 
 		super.addCustomCommand("publish", "update", AuditorReportPublishService.class);
+		super.addCustomCommand("unassign", "delete", AuditorReportUnassignService.class);
 	}
 
 }

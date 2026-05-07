@@ -31,3 +31,4 @@ any.report.list.label.name = Name
 any.report.list.label.monthsActive = Active months
 any.report.list.label.hours = Hours
 any.report.list.button.add = Add
+auditor.audit-report.button.unassign = Unassign Project

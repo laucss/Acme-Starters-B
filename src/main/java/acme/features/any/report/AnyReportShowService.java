@@ -4,8 +4,8 @@ package acme.features.any.report;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.client.components.models.Tuple;
 import acme.client.components.principals.Any;
+import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
 import acme.entities.audits.Report;
 
@@ -41,12 +41,15 @@ public class AnyReportShowService extends AbstractService<Any, Report> {
 
 	@Override
 	public void unbind() {
+		super.unbindObject(this.report, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "monthsActive", "hours", "auditor");
+		if (this.report.getProject() != null) {
+			super.unbindGlobal("title", this.report.getProject().getTitle());
+			if (this.report.getAuditor().getUserAccount().getId() == super.getRequest().getPrincipal().getAccountId()) {
+				super.unbindGlobal("projectId", this.report.getProject().getId());
+				if (this.report.getProjectUnassignMoment() != null && MomentHelper.getCurrentMoment().before(this.report.getProjectUnassignMoment()))
+					super.unbindGlobal("projectUnassignMoment", true);
+			}
 
-		Tuple tuple = super.unbindObject(this.report, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "monthsActive", "hours");
-
-		tuple.put("auditorId", this.report.getAuditor().getId());
-
-		super.getResponse().addData(tuple);
+		}
 	}
-
 }
