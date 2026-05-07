@@ -21,4 +21,6 @@ public interface MemberInventionRepository extends AbstractRepository {
 	@Query("select i from Invention i where i.id = :id")
 	Invention findInventionById(int id);
 
+	@Query("select i from Invention i where i.inventor.id = :id and i.project is not null")
+	Collection<Invention> findInventionsByInventorId(int id);
 }

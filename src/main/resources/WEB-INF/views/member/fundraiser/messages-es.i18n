@@ -1,0 +1,21 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2026 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for member particular
+# purposes.  The copyright owner does not offer member warranties or representations, nor do
+# they accept member liabilities with respect to them.
+
+member.fundraiser.form.title = Detalles del recuadador de fondos
+
+member.fundraiser.form.label.bank = Banco:
+member.fundraiser.form.label.statement = Declaración:
+member.fundraiser.form.label.agent = Agente:
+member.fundraiser.form.label.fullName = Nombre completo:
+member.fundraiser.form.label.email = Correo:
+
+
+
+

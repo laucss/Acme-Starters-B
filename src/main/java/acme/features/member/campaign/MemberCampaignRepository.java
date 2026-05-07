@@ -21,4 +21,7 @@ public interface MemberCampaignRepository extends AbstractRepository {
 	@Query("select c from Campaign c where c.id = :id")
 	Campaign findCampaignById(int id);
 
+	@Query("select c from Campaign c where c.spokesperson.id = :id and c.project is not null")
+	Collection<Campaign> findCampaignsBySpokespersonId(int id);
+
 }

@@ -21,4 +21,7 @@ public interface MemberStrategyRepository extends AbstractRepository {
 	@Query("select s from Strategy s where s.id = :id")
 	Strategy findStrategyById(int id);
 
+	@Query("select s from Strategy s where s.fundraiser.id = :id and s.project is not null")
+	Collection<Strategy> findStrategiesByFundraiserId(int id);
+
 }
