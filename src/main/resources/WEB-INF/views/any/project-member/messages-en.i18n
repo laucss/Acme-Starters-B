@@ -1,0 +1,38 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2026 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for member particular
+# purposes.  The copyright owner does not offer member warranties or representations, nor do
+# they accept member liabilities with respect to them.
+
+
+any.project-member.list.title = List of members
+any.project-member.form.title = Details of the member
+
+
+any.project-member.list.label.username = Username:
+any.project-member.list.label.email = Email:
+any.project-member.list.label.role = Role:
+
+
+
+any.project-member.form.label.username = Username: 
+any.project-member.form.label.name = Name: 
+any.project-member.form.label.surname = Surname: 
+any.project-member.form.label.email = Email:
+any.project-member.form.label.role = Role:
+
+any.project-member.form.label.bank = Bank:
+any.project-member.form.label.statement = Statement:
+any.project-member.form.label.agent = Agent:
+
+any.project-member.form.label.bio = Bio:
+any.project-member.form.label.keyWords = Key words:
+any.project-member.form.label.licensed = Licensed:
+
+any.project-member.form.label.cv = CV:
+any.project-member.form.label.achievements = Achievements:
+any.project-member.form.label.licensed = Licensed:
