@@ -46,3 +46,5 @@ acme.validation.project.only-published-with-reports.message = Only published pro
 acme.validation.project.only-published-with-sponsorships.message = Only published projects can have sponsorships
 
 acme.validation.project.effortNotCero-without-members.message = A project must have members in order to have components
+
+auditor.audit-report-assignment.error.auditReportId.required = There is no user selected

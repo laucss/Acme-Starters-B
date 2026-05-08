@@ -23,7 +23,7 @@ auditor.project.form.label.kickOff = Kick off moment:
 auditor.project.form.label.closeOut = Close out moment:
 auditor.project.form.label.personMonths = Person months:
 
-auditor.project.form.button.tactic = Tactics
+auditor.project.form.button.strategy = Strategies
 auditor.project.form.button.invention = Inventions
 auditor.project.form.button.campaign = Campaigns
 auditor.project.form.button.report= Reports

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import acme.client.repositories.AbstractRepository;
 import acme.entities.inventions.Invention;
+import acme.realms.Member;
 
 @Repository
 public interface MemberInventionRepository extends AbstractRepository {
@@ -23,4 +24,7 @@ public interface MemberInventionRepository extends AbstractRepository {
 
 	@Query("select i from Invention i where i.inventor.id = :id and i.project is not null")
 	Collection<Invention> findInventionsByInventorId(int id);
+
+	@Query("select m.id from Member m where m.userAccount.id = :id")
+	Member findMemberByUserAccountId(int id);
 }

@@ -24,12 +24,12 @@
 	
 	<jstl:choose>	 
 		<jstl:when test="${_command == 'show'}">
-			<acme:form-double code="inventor.project.form.label.personMonths" path="personMonths" readonly="true"/>
+			<acme:form-double code="auditor.project.form.label.personMonths" path="personMonths" readonly="true"/>
 			
-			<acme:button code="auditor.project.form.button.tactic" action="/auditor/tactic/list?projectId=${id}"/>
-			<acme:button code="auditor.project.form.button.invention" action="/auditor/invention/list?projectId=${id}"/>
-			<acme:button code="auditor.project.form.button.campaign" action="/auditor/campaign/list?projectId=${id}"/>
-			<acme:button code="auditor.project.form.button.report" action="/auditor/report/list?projectId=${id}"/>
+			<acme:button code="auditor.project.form.button.strategy" action="/any/strategy/list?projectId=${id}"/>
+			<acme:button code="auditor.project.form.button.invention" action="/any/invention/list?projectId=${id}"/>
+			<acme:button code="auditor.project.form.button.campaign" action="/any/campaign/list?projectId=${id}"/>
+			<acme:button code="auditor.project.form.button.report" action="/any/report/list?projectId=${id}"/>
 			
 			
 			
