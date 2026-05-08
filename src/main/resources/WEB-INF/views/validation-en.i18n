@@ -41,3 +41,6 @@ acme.validation.duplicated-title.message = The title is duplicated
 acme.validation.invalid-project-time-interval.message = Kick off moment must be before close out moment 
 
 projectMember.create.validation.NoUserSelected = There is no user selected
+
+acme.validation.project.only-published-with-reports.message = Only published projects can have reports
+acme.validation.project.only-published-with-sponsorships.message = Only published projects can have sponsorships

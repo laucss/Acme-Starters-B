@@ -41,4 +41,6 @@ acme.validation.duplicated-title.message = Título ya usado
 acme.validation.invalid-project-time-interval.message = acme.validation.invalid-time-interval.message = El instante de comienzo debe ser anterior al de fin
 
 projectMember.create.validation.NoUserSelected = No hay ningún usuario seleccionado
-
+ 
+acme.validation.project.only-published-with-reports.message = Solo los proyectos publicados pueden tener informes
+acme.validation.project.only-published-with-sponsorships.message = Solo los proyectos publicadod pueden tener patrocinios
