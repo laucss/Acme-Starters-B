@@ -30,6 +30,13 @@
 			<acme:button code="manager.project.form.button.invention" action="/member/invention/list?projectId=${id}"/>
 			<acme:button code="manager.project.form.button.campaign" action="/member/campaign/list?projectId=${id}"/>
 			
+					
+			
+			<acme:button code="manager.project.form.button.reports" action="/any/report/list?projectId=${id}"/>
+			<acme:button code="manager.project.form.button.sponsorships" action="/any/sponsorship/list?projectId=${id}"/>
+	
+		
+			
 			<acme:button code="manager.project.form.button.member" action="/member/project-member/list?projectId=${id}"/>
 			
 		</jstl:when>
