@@ -55,6 +55,26 @@ public class ProjectValidator extends AbstractValidator<ValidProject, Project> {
 					super.state(context, publishedProjectsHasAtLeastOneInvention, "*", "acme.validation.project.published-without-invention.message");
 				}
 
+				{
+					boolean onlyPublishedProjectsHasReports;
+					Long totalReports = this.repository.totalReportsByProject(project.getId());
+
+					Long reports = totalReports == null ? 0 : totalReports;
+					onlyPublishedProjectsHasReports = Boolean.TRUE.equals(!project.getDraftMode()) || reports == 0;
+
+					super.state(context, onlyPublishedProjectsHasReports, "*", "acme.validation.project.only-published-with-reports.message");
+				}
+
+				{
+					boolean onlyPublishedProjectsHasSponsorships;
+					Long totalSponsorships = this.repository.totalSponsorshipsByProject(project.getId());
+
+					Long sponsorships = totalSponsorships == null ? 0 : totalSponsorships;
+					onlyPublishedProjectsHasSponsorships = Boolean.TRUE.equals(!project.getDraftMode()) || sponsorships == 0;
+
+					super.state(context, onlyPublishedProjectsHasSponsorships, "*", "acme.validation.project.only-published-with-sponsorships.message");
+				}
+
 			}
 
 			result = !super.hasErrors(context);
