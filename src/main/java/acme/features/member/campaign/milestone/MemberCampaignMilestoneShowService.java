@@ -45,11 +45,13 @@ public class MemberCampaignMilestoneShowService extends AbstractService<Member, 
 
 		if (this.campaign != null) {
 
+			boolean isPublish = !this.campaign.getProject().getDraftMode();
+
 			int projectId = this.campaign.getProject().getId();
 
 			Integer count = this.campaignRepository.checkProjectBelongsToMember(projectId, memberId);
 
-			status = count != null && count > 0;
+			status = count != null && count > 0 || isPublish;
 		}
 
 		super.setAuthorised(status);

@@ -23,7 +23,7 @@ sponsor.project.form.label.kickOff = Kick off moment:
 sponsor.project.form.label.closeOut = Close out moment:
 sponsor.project.form.label.personMonths = Person months:
 
-sponsor.project.form.button.tactic = Tactics
+sponsor.project.form.button.strategy = Strategies
 sponsor.project.form.button.invention = Inventions
 sponsor.project.form.button.campaign = Campaigns
 sponsor.project.form.button.sponsorship= Sponsorships

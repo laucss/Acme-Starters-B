@@ -29,4 +29,21 @@ public interface ProjectRepository extends AbstractRepository {
 	@Query("select count(pm) from ProjectMember pm where pm.project.id = :projectId")
 	Integer countByProjectId(int projectId);
 
+	@Query("select count(i) from Invention i where i.project.id = :projectId")
+	Long totalInventionsByProject(int projectId);
+
+	@Query("select count(s) from Campaign s where s.project.id = :projectId")
+	Long totalCampaignsByProject(int projectId);
+
+	@Query("select count(s) from Strategy s where s.project.id = :projectId")
+	Long totalStrategiesByProject(int projectId);
+
+	@Query("select count(r) from Report r where r.project.id = :projectId")
+	Long totalReportsByProject(int projectId);
+
+	@Query("select count(s) from Sponsorship s where s.project.id = :projectId")
+	Long totalSponsorshipsByProject(int projectId);
+
+	@Query("select count(pm) from ProjectMember pm where pm.project.id = :projectId")
+	Long totalMembersByProjectId(int projectId);
 }

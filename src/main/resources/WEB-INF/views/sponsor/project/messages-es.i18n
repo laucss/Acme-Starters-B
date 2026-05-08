@@ -24,10 +24,10 @@ sponsor.project.form.label.kickOff = Momento de inicio:
 sponsor.project.form.label.closeOut = Momento de cierre:
 sponsor.project.form.label.personMonths = Meses por persona: 
 
-sponsor.project.form.button.tactic = Tácticas
+sponsor.project.form.button.strategy = Estrategias
 sponsor.project.form.button.invention = Invenciones
 sponsor.project.form.button.campaign = Campañas
-sponsor.project.form.button.report= Patrocinios
+sponsor.project.form.button.sponsorship= Patrocinios
 
 
 

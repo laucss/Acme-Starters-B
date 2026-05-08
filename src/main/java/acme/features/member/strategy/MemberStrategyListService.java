@@ -46,10 +46,15 @@ public class MemberStrategyListService extends AbstractService<Member, Strategy>
 		int memberId = super.getRequest().getPrincipal().getActiveRealm().getId();
 
 		if (this.project != null) {
-			Integer count = this.repository.checkProjectBelongsToMember(this.project.getId(), memberId);
 
-			status = count != null && count > 0;
+			boolean isPublished = !this.project.getDraftMode();
+
+			Integer count = this.repository.checkProjectBelongsToMember(this.project.getId(), memberId);
+			boolean isMember = count != null && count > 0;
+
+			status = isPublished || isMember;
 		}
+
 		super.setAuthorised(status);
 	}
 
