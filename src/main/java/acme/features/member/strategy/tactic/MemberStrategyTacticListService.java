@@ -51,9 +51,11 @@ public class MemberStrategyTacticListService extends AbstractService<Member, Tac
 		int memberId = super.getRequest().getPrincipal().getActiveRealm().getId();
 
 		if (this.project != null || this.strategy != null) {
+
+			boolean isPublish = !this.project.getDraftMode();
 			Integer count = this.strategyRepository.checkProjectBelongsToMember(this.project.getId(), memberId);
 
-			status = count != null && count > 0;
+			status = count != null && count > 0 || isPublish;
 		}
 
 		super.setAuthorised(status);

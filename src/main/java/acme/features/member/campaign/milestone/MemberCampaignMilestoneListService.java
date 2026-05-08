@@ -49,9 +49,11 @@ public class MemberCampaignMilestoneListService extends AbstractService<Member, 
 		int memberId = super.getRequest().getPrincipal().getActiveRealm().getId();
 
 		if (this.project != null || this.campaign != null) {
+
+			boolean isPublish = !this.project.getDraftMode();
 			Integer count = this.campaignRepository.checkProjectBelongsToMember(this.project.getId(), memberId);
 
-			status = count != null && count > 0;
+			status = count != null && count > 0 || isPublish;
 		}
 
 		super.setAuthorised(status);

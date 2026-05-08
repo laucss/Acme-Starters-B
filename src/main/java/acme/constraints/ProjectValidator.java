@@ -75,6 +75,25 @@ public class ProjectValidator extends AbstractValidator<ValidProject, Project> {
 					super.state(context, onlyPublishedProjectsHasSponsorships, "*", "acme.validation.project.only-published-with-sponsorships.message");
 				}
 
+				{
+					boolean onlyProjectsCanHaveComponentsIftThereAreMembers;
+					Long totalMembers = this.repository.totalMembersByProjectId(project.getId());
+					if (totalMembers <= 1) {
+
+						Long totalStrategies = this.repository.totalStrategiesByProject(project.getId());
+						Long totalCampaigns = this.repository.totalCampaignsByProject(project.getId());
+						Long totalInventions = this.repository.totalInventionsByProject(project.getId());
+
+						Long totalComponents = totalStrategies + totalCampaigns + totalInventions;
+						Long components = totalComponents == null ? 0 : totalComponents;
+						onlyProjectsCanHaveComponentsIftThereAreMembers = components == 0;
+
+						super.state(context, onlyProjectsCanHaveComponentsIftThereAreMembers, "*", "acme.validation.project.effortNotCero-without-members.message");
+
+					}
+
+				}
+
 			}
 
 			result = !super.hasErrors(context);

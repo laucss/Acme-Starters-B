@@ -30,11 +30,13 @@ public class MemberStrategyShowService extends AbstractService<Member, Strategy>
 
 		if (this.strategy != null) {
 
+			boolean isPublish = !this.strategy.getProject().getDraftMode();
+
 			int projectId = this.strategy.getProject().getId();
 
 			Integer count = this.repository.checkProjectBelongsToMember(projectId, memberId);
 
-			status = count != null && count > 0;
+			status = count != null && count > 0 || isPublish;
 		}
 
 		super.setAuthorised(status);

@@ -44,3 +44,5 @@ projectMember.create.validation.NoUserSelected = No hay ningún usuario seleccio
  
 acme.validation.project.only-published-with-reports.message = Solo los proyectos publicados pueden tener informes
 acme.validation.project.only-published-with-sponsorships.message = Solo los proyectos publicadod pueden tener patrocinios
+
+acme.validation.project.effortNotCero-without-members.message = Un proyecto debe tener miembros para poder tener componentes 

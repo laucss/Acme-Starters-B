@@ -47,11 +47,13 @@ public class MemberInventionPartShowService extends AbstractService<Member, Part
 
 		if (this.invention != null) {
 
+			boolean isPublish = !this.invention.getProject().getDraftMode();
+
 			int projectId = this.invention.getProject().getId();
 
 			Integer count = this.inventionRepository.checkProjectBelongsToMember(projectId, memberId);
 
-			status = count != null && count > 0;
+			status = count != null && count > 0 || isPublish;
 		}
 
 		super.setAuthorised(status);

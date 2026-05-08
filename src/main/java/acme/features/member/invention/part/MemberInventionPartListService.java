@@ -51,9 +51,11 @@ public class MemberInventionPartListService extends AbstractService<Member, Part
 		int memberId = super.getRequest().getPrincipal().getActiveRealm().getId();
 
 		if (this.project != null || this.invention != null) {
+
+			boolean isPublish = !this.project.getDraftMode();
 			Integer count = this.inventionRepository.checkProjectBelongsToMember(this.project.getId(), memberId);
 
-			status = count != null && count > 0;
+			status = count != null && count > 0 || isPublish;
 		}
 
 		super.setAuthorised(status);
