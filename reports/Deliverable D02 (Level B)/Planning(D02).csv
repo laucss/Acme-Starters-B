@@ -1,0 +1,109 @@
+﻿;Deliverable D02;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;"Use this form to document the tasks that you perform in your projects.  Please, review the colour code in the ""Abstract"" sheet.  In the exceptional case that you need to perform more tasks than expected, add them at the end.";;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;Costs;Expected:;EUR 1.340,00;;;;;;;;;;;
+;;Actual:;EUR 1.665,00;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;Execution period;;;Workload (in hours);;Costs (in EUR);;
+ORDER;ID;Type;Assignee;Role;Activity;Parent;Start moment;End moment;Status;Expected;Actual;Expected;Actual;Description
+1;T0001/M;Management;Student 3;Manager;Make plans;;17/04/2026 8:30;17/04/2026 12:30;Completed;0,50;1,00;EUR 25,00;EUR 50,00;Actualizar planificación
+2;T0002/O;Other;Student 2;Analyst;Define features;;19/04/2026 12:00;19/04/2026 12:30;Completed;0,50;0,50;EUR 20,00;EUR 20,00;Definir los características a implementar 
+3;T0003/O;Other;Student 4;Analyst;Create domain model;;19/04/2026 15:00;08/05/2026 16:25;Completed;1,00;1,00;EUR 40,00;EUR 40,00;Terminar de completar y perfeccionar el modelo de datos 
+4;T0004/O;Other;Student 2;Analyst;Elicit requirements;;19/04/2026 12:00;19/04/2026 12:30;Completed;0,50;0,50;EUR 20,00;EUR 20,00;Agrupar los requisitos en su documento correspondiente
+5;T0005/M;Management;Student 3;Manager;Initialise repository;;19/04/2026 17:00;19/04/2026 18:22;Completed;1,00;1,00;EUR 50,00;EUR 50,00;Implementar el nuevo repositorio en Github
+6;T0006/D;Development;Student 3;Developer;Implement feature;;24/04/2026 11:42;24/04/2026 12:30;Completed;0,50;0,50;EUR 12,50;EUR 12,50;Implementar rol Manager y member
+7;T0007/D;Development;Student 3;Developer;Implement feature;;24/04/2026 12:32;24/04/2026 13:35;Completed;1,00;1,00;EUR 25,00;EUR 25,00;Implemetar entidad Project con su validador 
+8;T0008/D;Development;Student 2;Developer;Implement feature;;30/04/2026 19:50;30/04/2026 21:02;Completed;0,70;1,00;EUR 17,50;EUR 25,00;sample data de Project 
+9;T0009/D;Development;Student 4;Developer;Implement feature;;24/04/2026 19:00;24/04/2026 21:00;Completed;0,70;1,20;EUR 17,50;EUR 30,00;Implementar visualización proyectos con rol Any
+10;T0010/D;Development;;Developer;Implement feature;;;;;1,00;;EUR 25,00;;errata de project (TAREA CANCELADA POR NO NECESARIA)
+11;T0011/D;Development;;Developer;Implement feature;;;;;1,00;;EUR 25,00;;errata de manager (TAREA CANCELADA POR NO NECESARIA)
+12;T0012/R/T0006/D;Revision;Student 4;Tester;Check task;T0006/D;24/04/2026 19:00;24/04/2026 19:02;Completed;0,20;0,20;EUR 6,00;EUR 6,00;Revisar tarea 
+13;T0013/R/T0007/D;Revision;Student 2;Tester;Check task;T0007/D;24/04/2026 13:40;24/04/2026 13:45;Completed;0,20;0,20;EUR 6,00;EUR 6,00;Revisar tarea 
+14;T0014/R/T0008/D;Revision;Student 4;Tester;Check task;T0008/D;24/04/2026 13:00;24/04/2026 13:02;Completed;0,20;0,20;EUR 6,00;EUR 6,00;Revisar tarea 
+15;T0015/R/T0009/D;Revision;Student 3;Tester;Check task;T0009/D;01/05/2026 19:10;01/05/2026 19:13;Completed;0,20;0,20;EUR 6,00;EUR 6,00;Revisar tarea 
+16;T0016/R/T0010/D;Revision;Student 4;Tester;Check task;T0010/D;01/05/2026 19:00;01/05/2026 19:02;Completed;0,20;0,20;EUR 6,00;EUR 6,00;Revisar tarea 
+17;T0017/R/T0011/D;Revision;Student 4;Tester;Check task;T0011/D;01/05/2026 19:00;01/05/2026 19:00;Completed;0,20;0,20;EUR 6,00;EUR 6,00;Revisar tarea 
+18;T0018/D;Development;Student 2;Developer;Implement feature;;02/05/2026 10:50;02/05/2026 11:49;Completed;0,70;0,70;EUR 17,50;EUR 17,50;Implementar entidad Baner y funcionalidad 
+19;T0019/D;Development;Student 3;Developer;Implement feature;;03/05/2026 19:57;03/05/2026 20:13;Completed;2,00;0,20;EUR 50,00;EUR 5,00;sample data de Manager y componentes
+20;T0020/D;Development;Student 3;Developer;Implement feature;;29/04/2026 17:28;06/05/2026 10:08;Completed;2,00;3,50;EUR 50,00;EUR 87,50;Implementar listado y form de proyectos siendo Manager  (+ listado de miembros)
+21;T0021/R/T0018/D;Revision;Student 2;Tester;Check task;T0018/D;03/05/2026 13:00;03/05/2026 13:01;Completed;0,20;0,20;EUR 6,00;EUR 6,00;Revisar tarea 
+22;T0022/R/T0019/D;Revision;Student 4;Tester;Check task;T0019/D;01/05/2026 18:00;01/05/2026 18:02;Completed;0,20;0,20;EUR 6,00;EUR 6,00;Revisar tarea 
+23;T0023/R/T0020/D;Revision;Student 3;Tester;Check task;T0020/D;01/05/2026 15:00;01/05/2026 15:01;Completed;0,20;0,20;EUR 6,00;EUR 6,00;Revisar tarea 
+24;T0024/D;Development;Student 4;Developer;Implement feature;;02/05/2026 15:00;02/05/2026 18:00;Completed;4,00;3,00;EUR 100,00;EUR 125,00;Implementar Authenticated de manager y become manager
+25;T0025/D;Development;Student 3;Developer;Implement feature;;01/05/2026 19:17;06/05/2026 21:37;Completed;2,00;5,00;EUR 50,00;EUR 125,00;Implementar funcionalidad de selección de miembros 
+26;T0026/D;Development;Student 2;Developer;Implement feature;;03/05/2026 17:40;03/05/2026 20:32;Completed;2,00;3,00;EUR 50,00;EUR 75,00;Implementar listado de mis proyectos siendo los roles Fundraiser, Inventor, Spokesperson , auditor y sponsor
+27;T0027/R/T0024/D;Revision;Student 3;Tester;Check task;T0024/D;03/05/2026 19:20;03/05/2026 19:22;Completed;0,20;0,20;EUR 6,00;EUR 6,00;Revisar tarea 
+28;T0028/R/T0025/D;Revision;Student 4;Tester;Check task;T0025/D;03/05/2026 21:00;03/05/2026 21:02;Completed;0,20;0,20;EUR 6,00;EUR 6,00;Revisar tarea 
+29;T0029/R/T0026/D;Revision;Student 3;Tester;Check task;T0026/D;04/05/2026 20:00;04/05/2026 20:02;Completed;0,20;0,20;EUR 6,00;EUR 6,00;Revisar tarea 
+30;T0030/D;Development;Student 2;Developer;Implement feature;;06/05/2026 18:30;06/05/2026 19:00;Completed;2,00;0,50;EUR 50,00;EUR 12,50;Actualizar el listado de proyectos de miembros
+31;T0031/D;Development;Student 2;Developer;Implement feature;;04/05/2026 20:00;06/05/2026 17:00;Completed;2,00;4,00;EUR 50,00;EUR 100,00;Implementar funcionalidad de añadir reports y audits 
+32;T0032/D;Development;Student 3;Developer;Implement feature;;03/05/2026 17:39;04/05/2026 9:54;Completed;1,00;2,00;EUR 25,00;EUR 50,00;Implementar Form de Manager y projects
+33;T0033/R/T0030/D;Revision;Student 3;Tester;Check task;T0030/D;06/05/2026 18:30;06/05/2026 18:32;Completed;0,20;0,20;EUR 6,00;EUR 6,00;Revisar tarea 
+34;T0034/R/T0031/D;Revision;Student 3;Tester;Check task;T0031/D;06/05/2026 20:00;06/05/2026 20:02;Completed;0,20;0,20;EUR 6,00;EUR 6,00;Revisar tarea 
+35;T0035/R/T0032/D;Revision;Student 4;Tester;Check task;T0032/D;06/05/2026 21:00;06/05/2026 21:02;Completed;0,20;0,20;EUR 6,00;EUR 6,00;Revisar tarea 
+36;T0036/D;Development;Student 3;Developer;Implement feature;;03/05/2026 18:20;04/05/2026 15:20;Completed;2,00;2,00;EUR 50,00;EUR 50,00;Implementar listado de strategies, inventions, campaigns en el form del project siendo miembro
+37;T0037/D;Development;Student 4;Developer;Implement feature;;03/05/2026 15:00;04/05/2026 18:00;Completed;2,00;2,00;EUR 50,00;EUR 50,00;Implementar create, update, delete y publish de un proyecto 
+38;T0038/D;Development;Student 4;Developer;Implement feature;;04/05/2026 19:00;04/05/2026 20:00;Completed;2,00;2,00;EUR 50,00;EUR 50,00;Implementar listado de strategies, inventions, campaigns en any
+39;T0039/D;Development;Student 4;Developer;Implement feature;;05/05/2026 19:30;05/05/2026 21:00;Completed;1,50;2,00;EUR 37,50;EUR 50,00;Implementar forms de campaigns... de member
+40;T0040/D;Development;Student 2;Developer;Implement feature;;06/05/2026 19:00;07/05/2026 18:10;Completed;2,00;4,00;EUR 50,00;EUR 100,00;Implementar funcionalidad de añadir invenciones,campañas y estrategias
+41;T0041/D;Development;Student 3;Developer;Implement feature;;07/05/2026 16:48;07/05/2026 18:26;Completed;2,00;1,50;EUR 50,00;EUR 37,50;Form de cada miembro 
+42;T0042/D;Development;Student 4;Developer;Implement feature;;07/05/2026 16:00;07/05/2026 18:00;Completed;1,50;2,00;EUR 37,50;EUR 50,00;Show de inventor, spokesperson y fundraiser con sus forms
+43;T0043/D;Development;Student 3;Developer;Implement feature;;07/05/2026 19:41;07/05/2026 21:26;Completed;1,00;1,00;EUR 25,00;;Arreglar fallo desasignar report y sponsoship
+44;T0044/D;Development;Student 2;Developer;Implement feature;;07/05/2026 20:20;07/05/2026 21:30;Completed;1,00;1,50;EUR 25,00;EUR 37,50;listado de members en any
+45;T0045/D;Development;Student 2;Developer;Implement feature;;08/05/2026 11:10;08/05/2026 12:00;Completed;1,00;1,00;EUR 25,00;EUR 25,00;arreglo fallos revisión 1
+46;T0046/D;Development;Student 3;Developer;Implement feature;;08/05/2026 12:15;08/05/2026 13:15;Completed;0,50;1,00;EUR 12,50;EUR 25,00;arreglo fallo show componente siendo manager
+47;T0047/D;Development;Student 2;Developer;Test feature informally;;08/05/2026 18:25;08/05/2026 21:35;Completed;1,50;3,00;EUR 37,50;EUR 75,00;Tests hacking
+48;T0048/D;Development;Student 3;Developer;Test feature informally;;08/05/2026 18:25;08/05/2026 21:11;Completed;1,50;3,00;EUR 37,50;EUR 75,00;Legal test
+49;T0049/D;Development;Student 4;Developer;Test feature informally;;08/05/2026 18:25;08/05/2026 21:11;Completed;1,50;3,00;EUR 37,50;EUR 75,00;Tests
+50;T0050/M;Management;Student 3;Manager;Write report;;08/05/2026 21:48;08/05/2026 21:50;Completed;0,10;0,10;EUR 5,00;EUR 5,00;Subir documentos
+51;;;;;;;;;;;;;;
+52;;;;;;;;;;;;;;
+53;;;;;;;;;;;;;;
+54;;;;;;;;;;;;;;
+55;;;;;;;;;;;;;;
+56;;;;;;;;;;;;;;
+57;;;;;;;;;;;;;;
+58;;;;;;;;;;;;;;
+59;;;;;;;;;;;;;;
+60;;;;;;;;;;;;;;
+61;;;;;;;;;;;;;;
+62;;;;;;;;;;;;;;
+63;;;;;;;;;;;;;;
+64;;;;;;;;;;;;;;
+65;;;;;;;;;;;;;;
+66;;;;;;;;;;;;;;
+67;;;;;;;;;;;;;;
+68;;;;;;;;;;;;;;
+69;;;;;;;;;;;;;;
+70;;;;;;;;;;;;;;
+71;;;;;;;;;;;;;;
+72;;;;;;;;;;;;;;
+73;;;;;;;;;;;;;;
+74;;;;;;;;;;;;;;
+75;;;;;;;;;;;;;;
+76;;;;;;;;;;;;;;
+77;;;;;;;;;;;;;;
+78;;;;;;;;;;;;;;
+79;;;;;;;;;;;;;;
+80;;;;;;;;;;;;;;
+81;;;;;;;;;;;;;;
+82;;;;;;;;;;;;;;
+83;;;;;;;;;;;;;;
+84;;;;;;;;;;;;;;
+85;;;;;;;;;;;;;;
+86;;;;;;;;;;;;;;
+87;;;;;;;;;;;;;;
+88;;;;;;;;;;;;;;
+89;;;;;;;;;;;;;;
+90;;;;;;;;;;;;;;
+91;;;;;;;;;;;;;;
+92;;;;;;;;;;;;;;
+93;;;;;;;;;;;;;;
+94;;;;;;;;;;;;;;
+95;;;;;;;;;;;;;;
+96;;;;;;;;;;;;;;
+97;;;;;;;;;;;;;;
+98;;;;;;;;;;;;;;
+99;;;;;;;;;;;;;;
+100;;;;;;;;;;;;;;
