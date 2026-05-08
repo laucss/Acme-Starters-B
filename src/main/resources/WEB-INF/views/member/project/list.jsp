@@ -5,7 +5,7 @@
 <acme:list>
 	<acme:list-column code="member.project.list.label.title" path="title"/>
 	<acme:list-column code="member.project.list.label.keyWords" path="keyWords"/>
-	<acme:list-column code="member.project.list.label.kickOffMoment" path="kickOffMoment"/>
-	<acme:list-column code="member.project.list.label.closeOutMoment" path="closeOutMoment"/>
+	<acme:list-column code="member.project.list.label.kickOff" path="kickOff"/>
+	<acme:list-column code="member.project.list.label.closeOut" path="closeOut"/>
 	<acme:list-hidden path="description"/>
 </acme:list>

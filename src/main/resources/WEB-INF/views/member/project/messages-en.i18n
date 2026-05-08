@@ -3,8 +3,8 @@ member.project.form.title = Project details
 
 member.project.list.label.title = Title
 member.project.list.label.keyWords = Key words
-member.project.list.label.kickOffMoment = Kick off moment
-member.project.list.label.closeOutMoment = Close out moment
+member.project.list.label.kickOff = Kick off 
+member.project.list.label.closeOut= Close out
 
 member.project.form.label.title = Title:
 member.project.form.label.keyWords = Key words:

@@ -34,5 +34,7 @@ manager.project.list.label.title = Título:
 manager.project.list.label.draftMode = Está en borrador: 
 
 manager.project.list.button.create = Crear
+manager.project.form.button.reports= Reportes
+manager.project.form.button.sponsorships = Patrocinios
 
 
