@@ -32,11 +32,13 @@ public class MemberCampaignShowService extends AbstractService<Member, Campaign>
 
 		if (this.campaign != null) {
 
+			boolean isPublish = !this.campaign.getProject().getDraftMode();
+
 			int projectId = this.campaign.getProject().getId();
 
 			Integer count = this.repository.checkProjectBelongsToMember(projectId, memberId);
 
-			status = count != null && count > 0;
+			status = count != null && count > 0 || isPublish;
 		}
 
 		super.setAuthorised(status);
