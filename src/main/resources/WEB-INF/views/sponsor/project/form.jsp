@@ -26,10 +26,10 @@
 		<jstl:when test="${_command == 'show'}">
 			<acme:form-double code="sponsor.project.form.label.personMonths" path="personMonths" readonly="true"/>
 			
-			<acme:button code="sponsor.project.form.button.tactic" action="/sponsor/tactic/list?projectId=${id}"/>
-			<acme:button code="sponsor.project.form.button.invention" action="/sponsor/invention/list?projectId=${id}"/>
-			<acme:button code="sponsor.project.form.button.campaign" action="/sponsor/campaign/list?projectId=${id}"/>
-			<acme:button code="sponsor.project.form.button.sponsorship" action="/sponsor/sponsorship/list?projectId=${id}"/>
+			<acme:button code="sponsor.project.form.button.strategy" action="/any/strategy/list?projectId=${id}"/>
+			<acme:button code="sponsor.project.form.button.invention" action="/any/invention/list?projectId=${id}"/>
+			<acme:button code="sponsor.project.form.button.campaign" action="/any/campaign/list?projectId=${id}"/>
+			<acme:button code="sponsor.project.form.button.sponsorship" action="/any/sponsorship/list?projectId=${id}"/>
 			
 			
 			
