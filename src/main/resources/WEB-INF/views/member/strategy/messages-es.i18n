@@ -35,5 +35,5 @@ member.strategy.list.button.create = Crear
 member.project.button.fundraiser.create = Añadir Estrategia
 member.strategy.button.unassign = Desasignar Estrategia
 
-member.strategy.form.button.fundraiser= Fundador
+member.strategy.form.button.fundraiser= Recaudador de fondos
 
